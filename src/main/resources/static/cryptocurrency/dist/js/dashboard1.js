@@ -90,47 +90,34 @@ $(function() {
         element: 'morris-area-chart',
         data: [{
             period: '2010',
-            iphone: 50,
-            ipad: 80,
-            itouch: 20
+            itouch: 10
         }, {
             period: '2011',
-            iphone: 130,
-            ipad: 100,
-            itouch: 80
+            itouch: 15
         }, {
             period: '2012',
-            iphone: 80,
-            ipad: 60,
-            itouch: 70
+            itouch: 14
         }, {
             period: '2013',
-            iphone: 70,
-            ipad: 200,
-            itouch: 140
+            itouch: 18
         }, {
             period: '2014',
-            iphone: 180,
-            ipad: 150,
-            itouch: 140
+            itouch: 20
         }, {
             period: '2015',
-            iphone: 105,
-            ipad: 100,
-            itouch: 80
+            itouch: 13
         },
             {
                 period: '2016',
-                iphone: 250,
-                ipad: 150,
-                itouch: 200
+                itouch: 16
             }
         ],
         xkey: 'period',
-        ykeys: ['iphone', 'ipad', 'itouch'],
-        labels: ['iPhone', 'iPad', 'iPod Touch'],
+        ykeys: ['itouch'],
+        labels: ['iPod Touch'],
         pointSize: 3,
         fillOpacity: 0,
+        ymin:'auto',
         pointStrokeColors: ['#55ce63', '#40c4ff', '#414755'],
         behaveLikeLine: true,
         gridLineColor: '#e0e0e0',
