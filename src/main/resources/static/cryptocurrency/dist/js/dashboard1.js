@@ -90,52 +90,55 @@ $(function() {
         element: 'morris-area-chart',
         data: [{
             period: '2010',
-            Ethereum: 0,
-            Bitcoin: 0,
-            itouch: 0
+            iphone: 50,
+            ipad: 80,
+            itouch: 20
         }, {
             period: '2011',
-            Ethereum: 130,
-            Bitcoin: 100,
+            iphone: 130,
+            ipad: 100,
             itouch: 80
         }, {
             period: '2012',
-            Ethereum: 80,
-            Bitcoin: 60,
+            iphone: 80,
+            ipad: 60,
             itouch: 70
         }, {
             period: '2013',
-            Ethereum: 70,
-            Bitcoin: 200,
+            iphone: 70,
+            ipad: 200,
             itouch: 140
         }, {
             period: '2014',
-            Ethereum: 180,
-            Bitcoin: 150,
+            iphone: 180,
+            ipad: 150,
             itouch: 140
         }, {
             period: '2015',
-            Ethereum: 105,
-            Bitcoin: 100,
+            iphone: 105,
+            ipad: 100,
             itouch: 80
-        }, {
-            period: '2016',
-            Ethereum: 250,
-            Bitcoin: 150,
-            itouch: 200
-        }],
+        },
+            {
+                period: '2016',
+                iphone: 250,
+                ipad: 150,
+                itouch: 200
+            }
+        ],
         xkey: 'period',
-        ykeys: ['Ethereum', 'Bitcoin'],
-        labels: ['Ethereum', 'Bitcoin'],
-        pointSize: 0,
+        ykeys: ['iphone', 'ipad', 'itouch'],
+        labels: ['iPhone', 'iPad', 'iPod Touch'],
+        pointSize: 3,
         fillOpacity: 0,
-        pointStrokeColors: ['#fb9678', '#fb9678', '#343a40'],
+        pointStrokeColors: ['#55ce63', '#40c4ff', '#414755'],
         behaveLikeLine: true,
-        gridLineColor: '#f6f6f6',
-        lineWidth: 1,
+        gridLineColor: '#e0e0e0',
+        lineWidth: 3,
         hideHover: 'auto',
-        lineColors: ['#343a40', '#fb9678', '#343a40'],
+        lineColors: ['#55ce63', '#40c4ff', '#414755'],
         resize: true
+
     });
 
 });
