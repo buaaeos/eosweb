@@ -123,7 +123,7 @@ $(function() {
         gridLineColor: '#e0e0e0',
         lineWidth: 3,
         hideHover: 'auto',
-        lineColors: ['#55ce63', '#40c4ff', '#414755'],
+        lineColors: ['#01c0c8', '#40c4ff', '#414755'],
         resize: true
 
     });
