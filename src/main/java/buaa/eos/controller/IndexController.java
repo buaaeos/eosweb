@@ -42,14 +42,13 @@ import java.util.List;
  * @since 2015-12-19 11:10
  */
 @Controller
-@RequestMapping("/test")
 public class IndexController {
 
-    @RequestMapping
+    @RequestMapping(value = "/")
     public String index()
     {
 
-        return "index";
+        return "index2";
     }
     @RequestMapping(value = "/aa")
     public String test()
