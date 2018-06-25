@@ -33,6 +33,16 @@ import javax.persistence.*;
  * @since 2016-01-31 21:42
  */
 public class BaseEntity {
+
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     @Id
     @Column(name = "Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,13 +54,7 @@ public class BaseEntity {
     @Transient
     private Integer rows = 10;
 
-    public Integer getId() {
-        return id;
-    }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public Integer getPage() {
         return page;

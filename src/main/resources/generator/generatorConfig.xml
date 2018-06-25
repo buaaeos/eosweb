@@ -15,7 +15,7 @@
         </plugin>
 
         <jdbcConnection driverClass="${spring.datasource.driver-class-name}"
-                        connectionURL="${spring.datasource.url}?useSSL=false"
+                        connectionURL="${spring.datasource.url}"
                         userId="${spring.datasource.username}"
                         password="${spring.datasource.password}"
                         >
@@ -30,12 +30,57 @@
         <javaClientGenerator targetPackage="buaa.eos.mapper" targetProject="src/main/java"
                              type="XMLMAPPER"/>
 
-        <table tableName="country">
+        <table tableName="account">
             <!--mysql 配置-->
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
 
             <!--oracle 配置-->
             <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
         </table>
+        <table tableName="action">
+            <!--mysql 配置-->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+
+            <!--oracle 配置-->
+            <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
+        </table>
+        <table tableName="block">
+            <!--mysql 配置-->
+            <generatedKey column="blk_id" sqlStatement="Mysql" identity="true"/>
+
+            <!--oracle 配置-->
+            <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
+        </table>
+        <table tableName="permission">
+            <!--mysql 配置-->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+
+            <!--oracle 配置-->
+            <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
+        </table>
+        <table tableName="transcation">
+            <!--mysql 配置-->
+            <generatedKey column="trx_id" sqlStatement="Mysql" identity="true"/>
+
+            <!--oracle 配置-->
+            <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
+        </table>
+        <table tableName="user_info">
+            <!--mysql 配置-->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+
+            <!--oracle 配置-->
+            <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
+        </table>
+        <table tableName="vote_info">
+        <!--mysql 配置-->
+        <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+
+        <!--oracle 配置-->
+        <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
+    </table>
+
+
+
     </context>
 </generatorConfiguration>

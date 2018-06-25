@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="buaa.eos.mapper.VoteInfoMapper">
+  <resultMap id="BaseResultMap" type="buaa.eos.model.VoteInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="owner" jdbcType="VARCHAR" property="owner" />
+    <result column="proxy" jdbcType="VARCHAR" property="proxy" />
+    <result column="producers" jdbcType="VARCHAR" property="producers" />
+    <result column="staked" jdbcType="REAL" property="staked" />
+    <result column="last_vote_weight" jdbcType="REAL" property="lastVoteWeight" />
+    <result column="proxied_vote_weight" jdbcType="REAL" property="proxiedVoteWeight" />
+    <result column="is_proxy" jdbcType="SMALLINT" property="isProxy" />
+    <result column="deferred_trx_id" jdbcType="INTEGER" property="deferredTrxId" />
+    <result column="last_unstake_time" jdbcType="VARCHAR" property="lastUnstakeTime" />
+    <result column="unstaking" jdbcType="VARCHAR" property="unstaking" />
+    <result column="owner_id" jdbcType="INTEGER" property="ownerId" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="buaa.eos.model.VoteInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="owner" jdbcType="VARCHAR" property="owner" />
+    <result column="proxy" jdbcType="VARCHAR" property="proxy" />
+    <result column="producers" jdbcType="VARCHAR" property="producers" />
+    <result column="staked" jdbcType="REAL" property="staked" />
+    <result column="last_vote_weight" jdbcType="REAL" property="lastVoteWeight" />
+    <result column="proxied_vote_weight" jdbcType="REAL" property="proxiedVoteWeight" />
+    <result column="is_proxy" jdbcType="SMALLINT" property="isProxy" />
+    <result column="deferred_trx_id" jdbcType="INTEGER" property="deferredTrxId" />
+    <result column="last_unstake_time" jdbcType="VARCHAR" property="lastUnstakeTime" />
+    <result column="unstaking" jdbcType="VARCHAR" property="unstaking" />
+    <result column="owner_id" jdbcType="INTEGER" property="ownerId" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="buaa.eos.model.VoteInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="owner" jdbcType="VARCHAR" property="owner" />
+    <result column="proxy" jdbcType="VARCHAR" property="proxy" />
+    <result column="producers" jdbcType="VARCHAR" property="producers" />
+    <result column="staked" jdbcType="REAL" property="staked" />
+    <result column="last_vote_weight" jdbcType="REAL" property="lastVoteWeight" />
+    <result column="proxied_vote_weight" jdbcType="REAL" property="proxiedVoteWeight" />
+    <result column="is_proxy" jdbcType="SMALLINT" property="isProxy" />
+    <result column="deferred_trx_id" jdbcType="INTEGER" property="deferredTrxId" />
+    <result column="last_unstake_time" jdbcType="VARCHAR" property="lastUnstakeTime" />
+    <result column="unstaking" jdbcType="VARCHAR" property="unstaking" />
+    <result column="owner_id" jdbcType="INTEGER" property="ownerId" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="buaa.eos.model.VoteInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="owner" jdbcType="VARCHAR" property="owner" />
+    <result column="proxy" jdbcType="VARCHAR" property="proxy" />
+    <result column="producers" jdbcType="VARCHAR" property="producers" />
+    <result column="staked" jdbcType="REAL" property="staked" />
+    <result column="last_vote_weight" jdbcType="REAL" property="lastVoteWeight" />
+    <result column="proxied_vote_weight" jdbcType="REAL" property="proxiedVoteWeight" />
+    <result column="is_proxy" jdbcType="SMALLINT" property="isProxy" />
+    <result column="deferred_trx_id" jdbcType="INTEGER" property="deferredTrxId" />
+    <result column="last_unstake_time" jdbcType="VARCHAR" property="lastUnstakeTime" />
+    <result column="unstaking" jdbcType="VARCHAR" property="unstaking" />
+    <result column="owner_id" jdbcType="INTEGER" property="ownerId" />
+  </resultMap>
+</mapper>

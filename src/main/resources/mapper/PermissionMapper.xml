@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="buaa.eos.mapper.PermissionMapper">
+  <resultMap id="BaseResultMap" type="buaa.eos.model.Permission">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="perm_name" jdbcType="VARCHAR" property="permName" />
+    <result column="parent" jdbcType="VARCHAR" property="parent" />
+    <result column="threshold" jdbcType="INTEGER" property="threshold" />
+    <result column="key" jdbcType="VARCHAR" property="key" />
+    <result column="weight" jdbcType="REAL" property="weight" />
+    <result column="accounts" jdbcType="VARCHAR" property="accounts" />
+    <result column="waits" jdbcType="VARCHAR" property="waits" />
+    <result column="account_id" jdbcType="INTEGER" property="accountId" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="buaa.eos.model.Permission">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="perm_name" jdbcType="VARCHAR" property="permName" />
+    <result column="parent" jdbcType="VARCHAR" property="parent" />
+    <result column="threshold" jdbcType="INTEGER" property="threshold" />
+    <result column="key" jdbcType="VARCHAR" property="key" />
+    <result column="weight" jdbcType="REAL" property="weight" />
+    <result column="accounts" jdbcType="VARCHAR" property="accounts" />
+    <result column="waits" jdbcType="VARCHAR" property="waits" />
+    <result column="account_id" jdbcType="INTEGER" property="accountId" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="buaa.eos.model.Permission">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="perm_name" jdbcType="VARCHAR" property="permName" />
+    <result column="parent" jdbcType="VARCHAR" property="parent" />
+    <result column="threshold" jdbcType="INTEGER" property="threshold" />
+    <result column="key" jdbcType="VARCHAR" property="key" />
+    <result column="weight" jdbcType="REAL" property="weight" />
+    <result column="accounts" jdbcType="VARCHAR" property="accounts" />
+    <result column="waits" jdbcType="VARCHAR" property="waits" />
+    <result column="account_id" jdbcType="INTEGER" property="accountId" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="buaa.eos.model.Permission">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="perm_name" jdbcType="VARCHAR" property="permName" />
+    <result column="parent" jdbcType="VARCHAR" property="parent" />
+    <result column="threshold" jdbcType="INTEGER" property="threshold" />
+    <result column="key" jdbcType="VARCHAR" property="key" />
+    <result column="weight" jdbcType="REAL" property="weight" />
+    <result column="accounts" jdbcType="VARCHAR" property="accounts" />
+    <result column="waits" jdbcType="VARCHAR" property="waits" />
+    <result column="account_id" jdbcType="INTEGER" property="accountId" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="buaa.eos.mapper.ActionMapper">
+  <resultMap id="BaseResultMap" type="buaa.eos.model.Action">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="actor" jdbcType="VARCHAR" property="actor" />
+    <result column="permission" jdbcType="VARCHAR" property="permission" />
+    <result column="from" jdbcType="VARCHAR" property="from" />
+    <result column="to" jdbcType="VARCHAR" property="to" />
+    <result column="quantity" jdbcType="VARCHAR" property="quantity" />
+    <result column="memo" jdbcType="VARCHAR" property="memo" />
+    <result column="trx_id" jdbcType="VARCHAR" property="trxId" />
+    <result column="account_id" jdbcType="INTEGER" property="accountId" />
+    <result column="action_id" jdbcType="VARCHAR" property="actionId" />
+    <result column="hex_data" jdbcType="LONGVARCHAR" property="hexData" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="buaa.eos.model.Action">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="actor" jdbcType="VARCHAR" property="actor" />
+    <result column="permission" jdbcType="VARCHAR" property="permission" />
+    <result column="from" jdbcType="VARCHAR" property="from" />
+    <result column="to" jdbcType="VARCHAR" property="to" />
+    <result column="quantity" jdbcType="VARCHAR" property="quantity" />
+    <result column="memo" jdbcType="VARCHAR" property="memo" />
+    <result column="trx_id" jdbcType="VARCHAR" property="trxId" />
+    <result column="account_id" jdbcType="INTEGER" property="accountId" />
+    <result column="hex_data" jdbcType="LONGVARCHAR" property="hexData" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="buaa.eos.model.Action">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="actor" jdbcType="VARCHAR" property="actor" />
+    <result column="permission" jdbcType="VARCHAR" property="permission" />
+    <result column="from" jdbcType="VARCHAR" property="from" />
+    <result column="to" jdbcType="VARCHAR" property="to" />
+    <result column="quantity" jdbcType="VARCHAR" property="quantity" />
+    <result column="trx_id" jdbcType="INTEGER" property="trxId" />
+    <result column="hex_data" jdbcType="VARCHAR" property="hexData" />
+    <result column="account_id" jdbcType="INTEGER" property="accountId" />
+    <result column="memo" jdbcType="LONGVARCHAR" property="memo" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="buaa.eos.model.Action">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="actor" jdbcType="VARCHAR" property="actor" />
+    <result column="permission" jdbcType="VARCHAR" property="permission" />
+    <result column="from" jdbcType="VARCHAR" property="from" />
+    <result column="to" jdbcType="VARCHAR" property="to" />
+    <result column="quantity" jdbcType="VARCHAR" property="quantity" />
+    <result column="trx_id" jdbcType="INTEGER" property="trxId" />
+    <result column="hex_data" jdbcType="VARCHAR" property="hexData" />
+    <result column="account_id" jdbcType="INTEGER" property="accountId" />
+    <result column="memo" jdbcType="LONGVARCHAR" property="memo" />
+  </resultMap>
+</mapper>
