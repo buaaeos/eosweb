@@ -10,8 +10,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon1.png">
+    <title th:text="#{title}"></title>
     <!-- This page CSS -->
     <!-- Custom CSS -->
     <link href="/cryptocurrency/dist/css/style.min.css" rel="stylesheet">
@@ -64,7 +64,7 @@
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
                                 <li class="breadcrumb-item active">Dashboard 1</li>
                             </ol>
-                            <button type="button" class="btn btn-dark d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
+
                         </div>
                     </div>
                 </div>
@@ -75,53 +75,6 @@
                 <!-- ============================================================== -->
                 <!-- Basic information -->
                 <!-- ============================================================== -->
-                <div class ="card-group">
-                    <div class="card text-center">
-                        <div class="card-header bg-success">
-                        <h4 class="m-b-0 text-white" th:text="#{block_num}"></h4>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                        </div>
-                    </div>
-                    <div class="card text-center">
-                        <div class="card-header bg-info">
-                        <h4 class="m-b-0 text-white" th:text="#{Total_tx}"></h4>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                        </div>
-                    </div>
-                    <div class="card text-center">
-                        <div class="card-header bg-danger">
-                            <h4 class="m-b-0 text-white" th:text="#{EOSprice}"></h4>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                        </div>
-                    </div>
-                    <div class="card text-center">
-                        <div class="card-header bg-purple">
-                            <h4 class="m-b-0 text-white" th:text="#{EOS_market}"></h4>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                        </div>
-                    </div>
-
-                <div class="card text-center">
-                    <div class="card-header bg-success">
-                        <h4 class="m-b-0 text-white" th:text="#{Totalsupply}"></h4>
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Special title treatment</h4>
-                    </div>
-                </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- End Basic information -->
-                <!-- ============================================================== -->
-
                 <div class="card-group">
                     <div class="card bg-success m-r-10 ">
                         <div class="card-body">
@@ -154,6 +107,11 @@
                         </div>
                     </div>
                 </div>
+                <!-- ============================================================== -->
+                <!-- End Basic information -->
+                <!-- ============================================================== -->
+
+
 
                 <!-- ============================================================== -->
                 <!-- selling and bp -->
@@ -235,13 +193,9 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
-                                    <h4 class="card-title" th:text="#{bp_list}"></h4>
-                                    <select class="custom-select w-25 ml-auto">
-                                        <option selected="">January</option>
-                                        <option value="1">February</option>
-                                        <option value="2">March</option>
-                                        <option value="3">April</option>
-                                    </select>
+                                    <h4 class="card-title" th:text="#{bid_account}"></h4>
+                                    <button class="btn btn-outline-secondary ml-auto" type="button"><span th:text="#{view_all}"></span>&nbsp;&nbsp;<span class="btn-label"><i class="fa fa-plus-square-o" style="font-size: 14px;"></i></span></button>
+
                                 </div>
                                 <div class="table-responsive m-t-20">
                                     <table class="table stylish-table">
