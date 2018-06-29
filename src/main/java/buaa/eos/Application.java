@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import tk.mybatis.spring.annotation.MapperScan;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * @author liuzh
@@ -17,6 +18,7 @@ import tk.mybatis.spring.annotation.MapperScan;
  */
 @SpringBootApplication
 @Controller
+@EnableScheduling
 @MapperScan(basePackages = "buaa.eos.mapper")
 public class Application implements WebMvcConfigurer,CommandLineRunner {
     private Logger logger = LoggerFactory.getLogger(Application.class);

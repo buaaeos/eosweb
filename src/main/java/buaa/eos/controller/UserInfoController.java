@@ -20,7 +20,8 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
- */
+ *//*
+
 
 package buaa.eos.controller;
 
@@ -37,10 +38,12 @@ import buaa.eos.model.UserInfo;
 
 import java.util.List;
 
+*/
 /**
  * @author liuzh
  * @since 2015-12-19 11:10
- */
+ *//*
+
 @RestController
 @RequestMapping("/users")
 public class UserInfoController {
@@ -51,7 +54,9 @@ public class UserInfoController {
     @RequestMapping
     public PageInfo<UserInfo> getAll(UserInfo userInfo) {
         List<UserInfo> userInfoList = userInfoService.getAll(userInfo);
-        return new PageInfo<UserInfo>(userInfoList);
+        return new PageInfo<UserInfo>(userInfoList);*/
+/**//*
+
     }
 
     @RequestMapping(value = "/add")
@@ -84,3 +89,4 @@ public class UserInfoController {
         return result;
     }
 }
+*/

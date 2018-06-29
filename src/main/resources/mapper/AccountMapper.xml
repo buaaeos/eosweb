@@ -1,139 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="buaa.eos.mapper.AccountMapper">
-  <resultMap id="BaseResultMap" type="buaa.eos.model.Account">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="buaa.eos.mapper.AccountMapper" >
+  <resultMap id="BaseResultMap" type="buaa.eos.model.Account" >
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="account_name" jdbcType="VARCHAR" property="accountName" />
-    <result column="head_block_num" jdbcType="INTEGER" property="headBlockNum" />
-    <result column="head_block_time" jdbcType="VARCHAR" property="headBlockTime" />
-    <result column="privileged" jdbcType="VARCHAR" property="privileged" />
-    <result column="last_code_update" jdbcType="VARCHAR" property="lastCodeUpdate" />
-    <result column="created" jdbcType="VARCHAR" property="created" />
-    <result column="ram_quota" jdbcType="REAL" property="ramQuota" />
-    <result column="net_weight" jdbcType="REAL" property="netWeight" />
-    <result column="cpu_weight" jdbcType="REAL" property="cpuWeight" />
-    <result column="net_used" jdbcType="REAL" property="netUsed" />
-    <result column="net_available" jdbcType="REAL" property="netAvailable" />
-    <result column="net_max" jdbcType="REAL" property="netMax" />
-    <result column="cpu_used" jdbcType="REAL" property="cpuUsed" />
-    <result column="cpu_available" jdbcType="REAL" property="cpuAvailable" />
-    <result column="cpu_max" jdbcType="REAL" property="cpuMax" />
-    <result column="ram_usage" jdbcType="REAL" property="ramUsage" />
-    <result column="self_del_from" jdbcType="VARCHAR" property="selfDelFrom" />
-    <result column="self_del_to" jdbcType="VARCHAR" property="selfDelTo" />
-    <result column="self_del_net" jdbcType="REAL" property="selfDelNet" />
-    <result column="self_del_cpu" jdbcType="REAL" property="selfDelCpu" />
-    <result column="refund_request" jdbcType="VARCHAR" property="refundRequest" />
-  </resultMap>
-  <resultMap id="BaseResultMap" type="buaa.eos.model.Account">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="account_name" jdbcType="VARCHAR" property="accountName" />
-    <result column="head_block_num" jdbcType="INTEGER" property="headBlockNum" />
-    <result column="head_block_time" jdbcType="VARCHAR" property="headBlockTime" />
-    <result column="privileged" jdbcType="VARCHAR" property="privileged" />
-    <result column="last_code_update" jdbcType="VARCHAR" property="lastCodeUpdate" />
-    <result column="created" jdbcType="VARCHAR" property="created" />
-    <result column="ram_quota" jdbcType="REAL" property="ramQuota" />
-    <result column="net_weight" jdbcType="REAL" property="netWeight" />
-    <result column="cpu_weight" jdbcType="REAL" property="cpuWeight" />
-    <result column="net_used" jdbcType="REAL" property="netUsed" />
-    <result column="net_available" jdbcType="REAL" property="netAvailable" />
-    <result column="net_max" jdbcType="REAL" property="netMax" />
-    <result column="cpu_used" jdbcType="REAL" property="cpuUsed" />
-    <result column="cpu_available" jdbcType="REAL" property="cpuAvailable" />
-    <result column="cpu_max" jdbcType="REAL" property="cpuMax" />
-    <result column="ram_usage" jdbcType="REAL" property="ramUsage" />
-    <result column="self_del_from" jdbcType="VARCHAR" property="selfDelFrom" />
-    <result column="self_del_to" jdbcType="VARCHAR" property="selfDelTo" />
-    <result column="self_del_net" jdbcType="REAL" property="selfDelNet" />
-    <result column="self_del_cpu" jdbcType="REAL" property="selfDelCpu" />
-    <result column="refund_request" jdbcType="VARCHAR" property="refundRequest" />
-  </resultMap>
-  <resultMap id="BaseResultMap" type="buaa.eos.model.Account">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="account_name" jdbcType="VARCHAR" property="accountName" />
-    <result column="head_block_num" jdbcType="INTEGER" property="headBlockNum" />
-    <result column="head_block_time" jdbcType="VARCHAR" property="headBlockTime" />
-    <result column="privileged" jdbcType="VARCHAR" property="privileged" />
-    <result column="last_code_update" jdbcType="VARCHAR" property="lastCodeUpdate" />
-    <result column="created" jdbcType="VARCHAR" property="created" />
-    <result column="ram_quota" jdbcType="REAL" property="ramQuota" />
-    <result column="net_weight" jdbcType="REAL" property="netWeight" />
-    <result column="cpu_weight" jdbcType="REAL" property="cpuWeight" />
-    <result column="net_used" jdbcType="REAL" property="netUsed" />
-    <result column="net_available" jdbcType="REAL" property="netAvailable" />
-    <result column="net_max" jdbcType="REAL" property="netMax" />
-    <result column="cpu_used" jdbcType="REAL" property="cpuUsed" />
-    <result column="cpu_available" jdbcType="REAL" property="cpuAvailable" />
-    <result column="cpu_max" jdbcType="REAL" property="cpuMax" />
-    <result column="ram_usage" jdbcType="REAL" property="ramUsage" />
-    <result column="self_del_from" jdbcType="VARCHAR" property="selfDelFrom" />
-    <result column="self_del_to" jdbcType="VARCHAR" property="selfDelTo" />
-    <result column="self_del_net" jdbcType="REAL" property="selfDelNet" />
-    <result column="self_del_cpu" jdbcType="REAL" property="selfDelCpu" />
-    <result column="refund_request" jdbcType="VARCHAR" property="refundRequest" />
-  </resultMap>
-  <resultMap id="BaseResultMap" type="buaa.eos.model.Account">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="account_name" jdbcType="VARCHAR" property="accountName" />
-    <result column="head_block_num" jdbcType="INTEGER" property="headBlockNum" />
-    <result column="head_block_time" jdbcType="VARCHAR" property="headBlockTime" />
-    <result column="privileged" jdbcType="VARCHAR" property="privileged" />
-    <result column="last_code_update" jdbcType="VARCHAR" property="lastCodeUpdate" />
-    <result column="created" jdbcType="VARCHAR" property="created" />
-    <result column="ram_quota" jdbcType="REAL" property="ramQuota" />
-    <result column="net_weight" jdbcType="REAL" property="netWeight" />
-    <result column="cpu_weight" jdbcType="REAL" property="cpuWeight" />
-    <result column="net_used" jdbcType="REAL" property="netUsed" />
-    <result column="net_available" jdbcType="REAL" property="netAvailable" />
-    <result column="net_max" jdbcType="REAL" property="netMax" />
-    <result column="cpu_used" jdbcType="REAL" property="cpuUsed" />
-    <result column="cpu_available" jdbcType="REAL" property="cpuAvailable" />
-    <result column="cpu_max" jdbcType="REAL" property="cpuMax" />
-    <result column="ram_usage" jdbcType="REAL" property="ramUsage" />
-    <result column="self_del_from" jdbcType="VARCHAR" property="selfDelFrom" />
-    <result column="self_del_to" jdbcType="VARCHAR" property="selfDelTo" />
-    <result column="self_del_net" jdbcType="REAL" property="selfDelNet" />
-    <result column="self_del_cpu" jdbcType="REAL" property="selfDelCpu" />
-    <result column="refund_request" jdbcType="VARCHAR" property="refundRequest" />
-  </resultMap>
-  <resultMap id="BaseResultMap" type="buaa.eos.model.Account">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="account_name" jdbcType="VARCHAR" property="accountName" />
-    <result column="head_block_num" jdbcType="INTEGER" property="headBlockNum" />
-    <result column="head_block_time" jdbcType="VARCHAR" property="headBlockTime" />
-    <result column="privileged" jdbcType="VARCHAR" property="privileged" />
-    <result column="last_code_update" jdbcType="VARCHAR" property="lastCodeUpdate" />
-    <result column="created" jdbcType="VARCHAR" property="created" />
-    <result column="ram_quota" jdbcType="REAL" property="ramQuota" />
-    <result column="net_weight" jdbcType="REAL" property="netWeight" />
-    <result column="cpu_weight" jdbcType="REAL" property="cpuWeight" />
-    <result column="net_used" jdbcType="REAL" property="netUsed" />
-    <result column="net_available" jdbcType="REAL" property="netAvailable" />
-    <result column="net_max" jdbcType="REAL" property="netMax" />
-    <result column="cpu_used" jdbcType="REAL" property="cpuUsed" />
-    <result column="cpu_available" jdbcType="REAL" property="cpuAvailable" />
-    <result column="cpu_max" jdbcType="REAL" property="cpuMax" />
-    <result column="ram_usage" jdbcType="REAL" property="ramUsage" />
-    <result column="self_del_from" jdbcType="VARCHAR" property="selfDelFrom" />
-    <result column="self_del_to" jdbcType="VARCHAR" property="selfDelTo" />
-    <result column="self_del_net" jdbcType="REAL" property="selfDelNet" />
-    <result column="self_del_cpu" jdbcType="REAL" property="selfDelCpu" />
-    <result column="refund_request" jdbcType="VARCHAR" property="refundRequest" />
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="account_name" property="accountName" jdbcType="VARCHAR" />
+    <result column="head_block_num" property="headBlockNum" jdbcType="INTEGER" />
+    <result column="head_block_time" property="headBlockTime" jdbcType="VARCHAR" />
+    <result column="privileged" property="privileged" jdbcType="VARCHAR" />
+    <result column="last_code_update" property="lastCodeUpdate" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="VARCHAR" />
+    <result column="ram_quota" property="ramQuota" jdbcType="REAL" />
+    <result column="net_weight" property="netWeight" jdbcType="REAL" />
+    <result column="cpu_weight" property="cpuWeight" jdbcType="REAL" />
+    <result column="net_used" property="netUsed" jdbcType="REAL" />
+    <result column="net_available" property="netAvailable" jdbcType="REAL" />
+    <result column="net_max" property="netMax" jdbcType="REAL" />
+    <result column="cpu_used" property="cpuUsed" jdbcType="REAL" />
+    <result column="cpu_available" property="cpuAvailable" jdbcType="REAL" />
+    <result column="cpu_max" property="cpuMax" jdbcType="REAL" />
+    <result column="ram_usage" property="ramUsage" jdbcType="REAL" />
+    <result column="self_del_from" property="selfDelFrom" jdbcType="VARCHAR" />
+    <result column="self_del_to" property="selfDelTo" jdbcType="VARCHAR" />
+    <result column="self_del_net" property="selfDelNet" jdbcType="REAL" />
+    <result column="self_del_cpu" property="selfDelCpu" jdbcType="REAL" />
+    <result column="refund_request" property="refundRequest" jdbcType="VARCHAR" />
   </resultMap>
 </mapper>

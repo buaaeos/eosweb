@@ -20,16 +20,20 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
- */
+ *//*
+
 
 package buaa.eos.mapper;
 
 import buaa.eos.util.MyMapper;
 import buaa.eos.model.City;
 
+*/
 /**
  * @author liuzh_3nofxnp
  * @since 2016-01-22 22:17
- */
+ *//*
+
 public interface CityMapper extends MyMapper<City> {
 }
+*/

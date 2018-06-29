@@ -1,6 +1,6 @@
 package buaa.eos.test;
 
-import buaa.eos.service.CountryService;
+import buaa.eos.service.BlockService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,27 +8,27 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit4.SpringRunner;
 import buaa.eos.Application;
-import buaa.eos.model.Country;
-import java.util.List;
-
-/**
+import buaa.eos.model.Block;
+/*
  * @author liuzh
  * @since 2017/9/2.
- */
+*/
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Import(Application.class)
 public class CountryServiceTest {
 
     @Autowired
-    private CountryService countryService;
+    private BlockService blockService;
 
     @Test
     public void test() {
-        Country country = new Country();
-        List<Country> all = countryService.getAll(country);
-        for (Country c : all) {
-            System.out.println(c.getCountryname());
-        }
+        Block block = new Block();
+//        block.setId(1);
+        block.setTimestamp("aaa");
+        block.setBlkId("awwe");
+        blockService.save(block);
+
     }
 }

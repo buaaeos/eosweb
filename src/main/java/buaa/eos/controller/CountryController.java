@@ -20,7 +20,8 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
- */
+ *//*
+
 
 package buaa.eos.controller;
 
@@ -36,10 +37,12 @@ import buaa.eos.service.CountryService;
 import buaa.eos.model.Country;
 import java.util.List;
 
+*/
 /**
  * @author liuzh
  * @since 2015-12-19 11:10
- */
+ *//*
+
 @Controller
 @RequestMapping("/countries")
 public class CountryController {
@@ -91,3 +94,4 @@ public class CountryController {
         return result;
     }
 }
+*/

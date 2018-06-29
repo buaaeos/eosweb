@@ -4,10 +4,10 @@ import javax.persistence.*;
 
 public class Block extends BaseEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "blk_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String blkId;
 
     private String timestamp;

@@ -1,68 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="buaa.eos.mapper.BlockMapper">
-  <resultMap id="BaseResultMap" type="buaa.eos.model.Block">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="buaa.eos.mapper.BlockMapper" >
+  <resultMap id="BaseResultMap" type="buaa.eos.model.Block" >
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="blk_id" jdbcType="VARCHAR" property="blkId" />
-    <result column="timestamp" jdbcType="VARCHAR" property="timestamp" />
-    <result column="previous" jdbcType="VARCHAR" property="previous" />
-    <result column="transaction_mroot" jdbcType="VARCHAR" property="transactionMroot" />
-    <result column="action_mroot" jdbcType="VARCHAR" property="actionMroot" />
-    <result column="schedule_version" jdbcType="INTEGER" property="scheduleVersion" />
-    <result column="new_producers" jdbcType="VARCHAR" property="newProducers" />
-    <result column="block_num" jdbcType="INTEGER" property="blockNum" />
-    <result column="ref_block_prefix" jdbcType="DECIMAL" property="refBlockPrefix" />
-    <result column="producer_signature" jdbcType="LONGVARCHAR" property="producerSignature" />
-  </resultMap>
-  <resultMap id="BaseResultMap" type="buaa.eos.model.Block">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="blk_id" jdbcType="VARCHAR" property="blkId" />
-    <result column="timestamp" jdbcType="VARCHAR" property="timestamp" />
-    <result column="previous" jdbcType="VARCHAR" property="previous" />
-    <result column="transaction_mroot" jdbcType="VARCHAR" property="transactionMroot" />
-    <result column="action_mroot" jdbcType="VARCHAR" property="actionMroot" />
-    <result column="schedule_version" jdbcType="INTEGER" property="scheduleVersion" />
-    <result column="new_producers" jdbcType="VARCHAR" property="newProducers" />
-    <result column="block_num" jdbcType="INTEGER" property="blockNum" />
-    <result column="ref_block_prefix" jdbcType="DECIMAL" property="refBlockPrefix" />
-    <result column="producer_signature" jdbcType="LONGVARCHAR" property="producerSignature" />
-  </resultMap>
-  <resultMap id="BaseResultMap" type="buaa.eos.model.Block">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="blk_id" jdbcType="INTEGER" property="blkId" />
-    <result column="id" jdbcType="VARCHAR" property="id" />
-    <result column="timestamp" jdbcType="VARCHAR" property="timestamp" />
-    <result column="previous" jdbcType="VARCHAR" property="previous" />
-    <result column="transaction_mroot" jdbcType="VARCHAR" property="transactionMroot" />
-    <result column="action_mroot" jdbcType="VARCHAR" property="actionMroot" />
-    <result column="schedule_version" jdbcType="INTEGER" property="scheduleVersion" />
-    <result column="new_producers" jdbcType="VARCHAR" property="newProducers" />
-    <result column="producer_signature" jdbcType="VARCHAR" property="producerSignature" />
-    <result column="block_num" jdbcType="INTEGER" property="blockNum" />
-    <result column="ref_block_prefix" jdbcType="DECIMAL" property="refBlockPrefix" />
-  </resultMap>
-  <resultMap id="BaseResultMap" type="buaa.eos.model.Block">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="blk_id" jdbcType="INTEGER" property="blkId" />
-    <result column="id" jdbcType="VARCHAR" property="id" />
-    <result column="timestamp" jdbcType="VARCHAR" property="timestamp" />
-    <result column="previous" jdbcType="VARCHAR" property="previous" />
-    <result column="transaction_mroot" jdbcType="VARCHAR" property="transactionMroot" />
-    <result column="action_mroot" jdbcType="VARCHAR" property="actionMroot" />
-    <result column="schedule_version" jdbcType="INTEGER" property="scheduleVersion" />
-    <result column="new_producers" jdbcType="VARCHAR" property="newProducers" />
-    <result column="producer_signature" jdbcType="VARCHAR" property="producerSignature" />
-    <result column="block_num" jdbcType="INTEGER" property="blockNum" />
-    <result column="ref_block_prefix" jdbcType="DECIMAL" property="refBlockPrefix" />
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="blk_id" property="blkId" jdbcType="VARCHAR" />
+    <result column="timestamp" property="timestamp" jdbcType="VARCHAR" />
+    <result column="previous" property="previous" jdbcType="VARCHAR" />
+    <result column="transaction_mroot" property="transactionMroot" jdbcType="VARCHAR" />
+    <result column="action_mroot" property="actionMroot" jdbcType="VARCHAR" />
+    <result column="schedule_version" property="scheduleVersion" jdbcType="INTEGER" />
+    <result column="new_producers" property="newProducers" jdbcType="VARCHAR" />
+    <result column="block_num" property="blockNum" jdbcType="INTEGER" />
+    <result column="ref_block_prefix" property="refBlockPrefix" jdbcType="DECIMAL" />
+    <result column="producer_signature" property="producerSignature" jdbcType="LONGVARCHAR" />
   </resultMap>
 </mapper>

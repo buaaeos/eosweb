@@ -20,7 +20,8 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
- */
+ *//*
+
 
 package buaa.eos.service;
 
@@ -32,10 +33,12 @@ import buaa.eos.model.UserInfo;
 
 import java.util.List;
 
+*/
 /**
  * @author liuzh
  * @since 2016-01-31 21:42
- */
+ *//*
+
 @Service
 public class UserInfoService {
 
@@ -65,3 +68,4 @@ public class UserInfoService {
         }
     }
 }
+*/
