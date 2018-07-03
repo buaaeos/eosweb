@@ -16,25 +16,19 @@ public class VoteInfo extends BaseEntity {
 
     private Float staked;
 
-    @Column(name = "last_vote_weight")
-    private Float lastVoteWeight;
+    private Float last_vote_weight;
 
-    @Column(name = "proxied_vote_weight")
-    private Float proxiedVoteWeight;
+    private Float proxied_vote_weight;
 
-    @Column(name = "is_proxy")
-    private Short isProxy;
+    private Short is_proxy;
 
-    @Column(name = "deferred_trx_id")
-    private Integer deferredTrxId;
+    private Integer deferred_trx_id;
 
-    @Column(name = "last_unstake_time")
-    private String lastUnstakeTime;
+    private String last_unstake_time;
 
     private String unstaking;
 
-    @Column(name = "owner_id")
-    private Integer ownerId;
+    private Integer owner_id;
 
     /**
      * @return id
@@ -109,71 +103,71 @@ public class VoteInfo extends BaseEntity {
     /**
      * @return last_vote_weight
      */
-    public Float getLastVoteWeight() {
-        return lastVoteWeight;
+    public Float getLast_vote_weight() {
+        return last_vote_weight;
     }
 
     /**
-     * @param lastVoteWeight
+     * @param last_vote_weight
      */
-    public void setLastVoteWeight(Float lastVoteWeight) {
-        this.lastVoteWeight = lastVoteWeight;
+    public void setLast_vote_weight(Float last_vote_weight) {
+        this.last_vote_weight = last_vote_weight;
     }
 
     /**
      * @return proxied_vote_weight
      */
-    public Float getProxiedVoteWeight() {
-        return proxiedVoteWeight;
+    public Float getProxied_vote_weight() {
+        return proxied_vote_weight;
     }
 
     /**
-     * @param proxiedVoteWeight
+     * @param proxied_vote_weight
      */
-    public void setProxiedVoteWeight(Float proxiedVoteWeight) {
-        this.proxiedVoteWeight = proxiedVoteWeight;
+    public void setProxied_vote_weight(Float proxied_vote_weight) {
+        this.proxied_vote_weight = proxied_vote_weight;
     }
 
     /**
      * @return is_proxy
      */
-    public Short getIsProxy() {
-        return isProxy;
+    public Short getIs_proxy() {
+        return is_proxy;
     }
 
     /**
-     * @param isProxy
+     * @param is_proxy
      */
-    public void setIsProxy(Short isProxy) {
-        this.isProxy = isProxy;
+    public void setIs_proxy(Short is_proxy) {
+        this.is_proxy = is_proxy;
     }
 
     /**
      * @return deferred_trx_id
      */
-    public Integer getDeferredTrxId() {
-        return deferredTrxId;
+    public Integer getDeferred_trx_id() {
+        return deferred_trx_id;
     }
 
     /**
-     * @param deferredTrxId
+     * @param deferred_trx_id
      */
-    public void setDeferredTrxId(Integer deferredTrxId) {
-        this.deferredTrxId = deferredTrxId;
+    public void setDeferred_trx_id(Integer deferred_trx_id) {
+        this.deferred_trx_id = deferred_trx_id;
     }
 
     /**
      * @return last_unstake_time
      */
-    public String getLastUnstakeTime() {
-        return lastUnstakeTime;
+    public String getLast_unstake_time() {
+        return last_unstake_time;
     }
 
     /**
-     * @param lastUnstakeTime
+     * @param last_unstake_time
      */
-    public void setLastUnstakeTime(String lastUnstakeTime) {
-        this.lastUnstakeTime = lastUnstakeTime;
+    public void setLast_unstake_time(String last_unstake_time) {
+        this.last_unstake_time = last_unstake_time;
     }
 
     /**
@@ -193,14 +187,14 @@ public class VoteInfo extends BaseEntity {
     /**
      * @return owner_id
      */
-    public Integer getOwnerId() {
-        return ownerId;
+    public Integer getOwner_id() {
+        return owner_id;
     }
 
     /**
-     * @param ownerId
+     * @param owner_id
      */
-    public void setOwnerId(Integer ownerId) {
-        this.ownerId = ownerId;
+    public void setOwner_id(Integer owner_id) {
+        this.owner_id = owner_id;
     }
 }

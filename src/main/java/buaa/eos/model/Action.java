@@ -21,19 +21,13 @@ public class Action extends BaseEntity {
 
     private String quantity;
 
+    private Integer trx_id;
+
+    private String hex_data;
+
+    private Integer account_id;
+
     private String memo;
-
-    @Column(name = "trx_id")
-    private String trxId;
-
-    @Column(name = "account_id")
-    private Integer accountId;
-
-    @Column(name = "action_id")
-    private String actionId;
-
-    @Column(name = "hex_data")
-    private String hexData;
 
     /**
      * @return id
@@ -148,6 +142,48 @@ public class Action extends BaseEntity {
     }
 
     /**
+     * @return trx_id
+     */
+    public Integer getTrx_id() {
+        return trx_id;
+    }
+
+    /**
+     * @param trx_id
+     */
+    public void setTrx_id(Integer trx_id) {
+        this.trx_id = trx_id;
+    }
+
+    /**
+     * @return hex_data
+     */
+    public String getHex_data() {
+        return hex_data;
+    }
+
+    /**
+     * @param hex_data
+     */
+    public void setHex_data(String hex_data) {
+        this.hex_data = hex_data;
+    }
+
+    /**
+     * @return account_id
+     */
+    public Integer getAccount_id() {
+        return account_id;
+    }
+
+    /**
+     * @param account_id
+     */
+    public void setAccount_id(Integer account_id) {
+        this.account_id = account_id;
+    }
+
+    /**
      * @return memo
      */
     public String getMemo() {
@@ -159,61 +195,5 @@ public class Action extends BaseEntity {
      */
     public void setMemo(String memo) {
         this.memo = memo;
-    }
-
-    /**
-     * @return trx_id
-     */
-    public String getTrxId() {
-        return trxId;
-    }
-
-    /**
-     * @param trxId
-     */
-    public void setTrxId(String trxId) {
-        this.trxId = trxId;
-    }
-
-    /**
-     * @return account_id
-     */
-    public Integer getAccountId() {
-        return accountId;
-    }
-
-    /**
-     * @param accountId
-     */
-    public void setAccountId(Integer accountId) {
-        this.accountId = accountId;
-    }
-
-    /**
-     * @return action_id
-     */
-    public String getActionId() {
-        return actionId;
-    }
-
-    /**
-     * @param actionId
-     */
-    public void setActionId(String actionId) {
-        this.actionId = actionId;
-    }
-
-    /**
-     * @return hex_data
-     */
-    public String getHexData() {
-        return hexData;
-    }
-
-    /**
-     * @param hexData
-     */
-    public void setHexData(String hexData) {
-        this.hexData = hexData;
     }
 }

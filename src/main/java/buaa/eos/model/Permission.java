@@ -7,8 +7,7 @@ public class Permission extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "perm_name")
-    private String permName;
+    private String perm_name;
 
     private String parent;
 
@@ -22,8 +21,7 @@ public class Permission extends BaseEntity {
 
     private String waits;
 
-    @Column(name = "account_id")
-    private Integer accountId;
+    private Integer account_id;
 
     /**
      * @return id
@@ -42,15 +40,15 @@ public class Permission extends BaseEntity {
     /**
      * @return perm_name
      */
-    public String getPermName() {
-        return permName;
+    public String getPerm_name() {
+        return perm_name;
     }
 
     /**
-     * @param permName
+     * @param perm_name
      */
-    public void setPermName(String permName) {
-        this.permName = permName;
+    public void setPerm_name(String perm_name) {
+        this.perm_name = perm_name;
     }
 
     /**
@@ -140,14 +138,14 @@ public class Permission extends BaseEntity {
     /**
      * @return account_id
      */
-    public Integer getAccountId() {
-        return accountId;
+    public Integer getAccount_id() {
+        return account_id;
     }
 
     /**
-     * @param accountId
+     * @param account_id
      */
-    public void setAccountId(Integer accountId) {
-        this.accountId = accountId;
+    public void setAccount_id(Integer account_id) {
+        this.account_id = account_id;
     }
 }

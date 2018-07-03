@@ -7,66 +7,47 @@ public class Account extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "account_name")
-    private String accountName;
+    private String account_name;
 
-    @Column(name = "head_block_num")
-    private Integer headBlockNum;
+    private Integer head_block_num;
 
-    @Column(name = "head_block_time")
-    private String headBlockTime;
+    private String head_block_time;
 
     private String privileged;
 
-    @Column(name = "last_code_update")
-    private String lastCodeUpdate;
+    private String last_code_update;
 
     private String created;
 
-    @Column(name = "ram_quota")
-    private Float ramQuota;
+    private Float ram_quota;
 
-    @Column(name = "net_weight")
-    private Float netWeight;
+    private Float net_weight;
 
-    @Column(name = "cpu_weight")
-    private Float cpuWeight;
+    private Float cpu_weight;
 
-    @Column(name = "net_used")
-    private Float netUsed;
+    private Float net_used;
 
-    @Column(name = "net_available")
-    private Float netAvailable;
+    private Float net_available;
 
-    @Column(name = "net_max")
-    private Float netMax;
+    private Float net_max;
 
-    @Column(name = "cpu_used")
-    private Float cpuUsed;
+    private Float cpu_used;
 
-    @Column(name = "cpu_available")
-    private Float cpuAvailable;
+    private Float cpu_available;
 
-    @Column(name = "cpu_max")
-    private Float cpuMax;
+    private Float cpu_max;
 
-    @Column(name = "ram_usage")
-    private Float ramUsage;
+    private Float ram_usage;
 
-    @Column(name = "self_del_from")
-    private String selfDelFrom;
+    private String self_del_from;
 
-    @Column(name = "self_del_to")
-    private String selfDelTo;
+    private String self_del_to;
 
-    @Column(name = "self_del_net")
-    private Float selfDelNet;
+    private Float self_del_net;
 
-    @Column(name = "self_del_cpu")
-    private Float selfDelCpu;
+    private Float self_del_cpu;
 
-    @Column(name = "refund_request")
-    private String refundRequest;
+    private String refund_request;
 
     /**
      * @return id
@@ -85,43 +66,43 @@ public class Account extends BaseEntity {
     /**
      * @return account_name
      */
-    public String getAccountName() {
-        return accountName;
+    public String getAccount_name() {
+        return account_name;
     }
 
     /**
-     * @param accountName
+     * @param account_name
      */
-    public void setAccountName(String accountName) {
-        this.accountName = accountName;
+    public void setAccount_name(String account_name) {
+        this.account_name = account_name;
     }
 
     /**
      * @return head_block_num
      */
-    public Integer getHeadBlockNum() {
-        return headBlockNum;
+    public Integer getHead_block_num() {
+        return head_block_num;
     }
 
     /**
-     * @param headBlockNum
+     * @param head_block_num
      */
-    public void setHeadBlockNum(Integer headBlockNum) {
-        this.headBlockNum = headBlockNum;
+    public void setHead_block_num(Integer head_block_num) {
+        this.head_block_num = head_block_num;
     }
 
     /**
      * @return head_block_time
      */
-    public String getHeadBlockTime() {
-        return headBlockTime;
+    public String getHead_block_time() {
+        return head_block_time;
     }
 
     /**
-     * @param headBlockTime
+     * @param head_block_time
      */
-    public void setHeadBlockTime(String headBlockTime) {
-        this.headBlockTime = headBlockTime;
+    public void setHead_block_time(String head_block_time) {
+        this.head_block_time = head_block_time;
     }
 
     /**
@@ -141,15 +122,15 @@ public class Account extends BaseEntity {
     /**
      * @return last_code_update
      */
-    public String getLastCodeUpdate() {
-        return lastCodeUpdate;
+    public String getLast_code_update() {
+        return last_code_update;
     }
 
     /**
-     * @param lastCodeUpdate
+     * @param last_code_update
      */
-    public void setLastCodeUpdate(String lastCodeUpdate) {
-        this.lastCodeUpdate = lastCodeUpdate;
+    public void setLast_code_update(String last_code_update) {
+        this.last_code_update = last_code_update;
     }
 
     /**
@@ -169,210 +150,210 @@ public class Account extends BaseEntity {
     /**
      * @return ram_quota
      */
-    public Float getRamQuota() {
-        return ramQuota;
+    public Float getRam_quota() {
+        return ram_quota;
     }
 
     /**
-     * @param ramQuota
+     * @param ram_quota
      */
-    public void setRamQuota(Float ramQuota) {
-        this.ramQuota = ramQuota;
+    public void setRam_quota(Float ram_quota) {
+        this.ram_quota = ram_quota;
     }
 
     /**
      * @return net_weight
      */
-    public Float getNetWeight() {
-        return netWeight;
+    public Float getNet_weight() {
+        return net_weight;
     }
 
     /**
-     * @param netWeight
+     * @param net_weight
      */
-    public void setNetWeight(Float netWeight) {
-        this.netWeight = netWeight;
+    public void setNet_weight(Float net_weight) {
+        this.net_weight = net_weight;
     }
 
     /**
      * @return cpu_weight
      */
-    public Float getCpuWeight() {
-        return cpuWeight;
+    public Float getCpu_weight() {
+        return cpu_weight;
     }
 
     /**
-     * @param cpuWeight
+     * @param cpu_weight
      */
-    public void setCpuWeight(Float cpuWeight) {
-        this.cpuWeight = cpuWeight;
+    public void setCpu_weight(Float cpu_weight) {
+        this.cpu_weight = cpu_weight;
     }
 
     /**
      * @return net_used
      */
-    public Float getNetUsed() {
-        return netUsed;
+    public Float getNet_used() {
+        return net_used;
     }
 
     /**
-     * @param netUsed
+     * @param net_used
      */
-    public void setNetUsed(Float netUsed) {
-        this.netUsed = netUsed;
+    public void setNet_used(Float net_used) {
+        this.net_used = net_used;
     }
 
     /**
      * @return net_available
      */
-    public Float getNetAvailable() {
-        return netAvailable;
+    public Float getNet_available() {
+        return net_available;
     }
 
     /**
-     * @param netAvailable
+     * @param net_available
      */
-    public void setNetAvailable(Float netAvailable) {
-        this.netAvailable = netAvailable;
+    public void setNet_available(Float net_available) {
+        this.net_available = net_available;
     }
 
     /**
      * @return net_max
      */
-    public Float getNetMax() {
-        return netMax;
+    public Float getNet_max() {
+        return net_max;
     }
 
     /**
-     * @param netMax
+     * @param net_max
      */
-    public void setNetMax(Float netMax) {
-        this.netMax = netMax;
+    public void setNet_max(Float net_max) {
+        this.net_max = net_max;
     }
 
     /**
      * @return cpu_used
      */
-    public Float getCpuUsed() {
-        return cpuUsed;
+    public Float getCpu_used() {
+        return cpu_used;
     }
 
     /**
-     * @param cpuUsed
+     * @param cpu_used
      */
-    public void setCpuUsed(Float cpuUsed) {
-        this.cpuUsed = cpuUsed;
+    public void setCpu_used(Float cpu_used) {
+        this.cpu_used = cpu_used;
     }
 
     /**
      * @return cpu_available
      */
-    public Float getCpuAvailable() {
-        return cpuAvailable;
+    public Float getCpu_available() {
+        return cpu_available;
     }
 
     /**
-     * @param cpuAvailable
+     * @param cpu_available
      */
-    public void setCpuAvailable(Float cpuAvailable) {
-        this.cpuAvailable = cpuAvailable;
+    public void setCpu_available(Float cpu_available) {
+        this.cpu_available = cpu_available;
     }
 
     /**
      * @return cpu_max
      */
-    public Float getCpuMax() {
-        return cpuMax;
+    public Float getCpu_max() {
+        return cpu_max;
     }
 
     /**
-     * @param cpuMax
+     * @param cpu_max
      */
-    public void setCpuMax(Float cpuMax) {
-        this.cpuMax = cpuMax;
+    public void setCpu_max(Float cpu_max) {
+        this.cpu_max = cpu_max;
     }
 
     /**
      * @return ram_usage
      */
-    public Float getRamUsage() {
-        return ramUsage;
+    public Float getRam_usage() {
+        return ram_usage;
     }
 
     /**
-     * @param ramUsage
+     * @param ram_usage
      */
-    public void setRamUsage(Float ramUsage) {
-        this.ramUsage = ramUsage;
+    public void setRam_usage(Float ram_usage) {
+        this.ram_usage = ram_usage;
     }
 
     /**
      * @return self_del_from
      */
-    public String getSelfDelFrom() {
-        return selfDelFrom;
+    public String getSelf_del_from() {
+        return self_del_from;
     }
 
     /**
-     * @param selfDelFrom
+     * @param self_del_from
      */
-    public void setSelfDelFrom(String selfDelFrom) {
-        this.selfDelFrom = selfDelFrom;
+    public void setSelf_del_from(String self_del_from) {
+        this.self_del_from = self_del_from;
     }
 
     /**
      * @return self_del_to
      */
-    public String getSelfDelTo() {
-        return selfDelTo;
+    public String getSelf_del_to() {
+        return self_del_to;
     }
 
     /**
-     * @param selfDelTo
+     * @param self_del_to
      */
-    public void setSelfDelTo(String selfDelTo) {
-        this.selfDelTo = selfDelTo;
+    public void setSelf_del_to(String self_del_to) {
+        this.self_del_to = self_del_to;
     }
 
     /**
      * @return self_del_net
      */
-    public Float getSelfDelNet() {
-        return selfDelNet;
+    public Float getSelf_del_net() {
+        return self_del_net;
     }
 
     /**
-     * @param selfDelNet
+     * @param self_del_net
      */
-    public void setSelfDelNet(Float selfDelNet) {
-        this.selfDelNet = selfDelNet;
+    public void setSelf_del_net(Float self_del_net) {
+        this.self_del_net = self_del_net;
     }
 
     /**
      * @return self_del_cpu
      */
-    public Float getSelfDelCpu() {
-        return selfDelCpu;
+    public Float getSelf_del_cpu() {
+        return self_del_cpu;
     }
 
     /**
-     * @param selfDelCpu
+     * @param self_del_cpu
      */
-    public void setSelfDelCpu(Float selfDelCpu) {
-        this.selfDelCpu = selfDelCpu;
+    public void setSelf_del_cpu(Float self_del_cpu) {
+        this.self_del_cpu = self_del_cpu;
     }
 
     /**
      * @return refund_request
      */
-    public String getRefundRequest() {
-        return refundRequest;
+    public String getRefund_request() {
+        return refund_request;
     }
 
     /**
-     * @param refundRequest
+     * @param refund_request
      */
-    public void setRefundRequest(String refundRequest) {
-        this.refundRequest = refundRequest;
+    public void setRefund_request(String refund_request) {
+        this.refund_request = refund_request;
     }
 }

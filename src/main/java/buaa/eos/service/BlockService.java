@@ -1,8 +1,11 @@
 package buaa.eos.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import buaa.eos.mapper.BlockMapper;
 import buaa.eos.model.Block;
+import buaa.eos.mapper.BlockMapper;
+
+import java.util.Date;
+
 @Service
 public class BlockService {
     @Autowired
@@ -18,9 +21,12 @@ public class BlockService {
        return blockMapper.selectMaxBlockNum();
     }
 
+    public Date getMaxTimestamp(){
+        return blockMapper.selectMaxTimestamp();
+    }
 
     public void save(Block block) {
-        if (block.getId() != null) {
+        if (block.getBlk_id() != null) {
             blockMapper.updateByPrimaryKey(block);
         } else {
             blockMapper.insert(block);

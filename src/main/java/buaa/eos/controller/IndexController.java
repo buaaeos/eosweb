@@ -24,18 +24,11 @@
 
 package buaa.eos.controller;
 
-import buaa.eos.model.Country;
 /*import buaa.eos.service.CountryService;*/
-import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import java.util.List;
+import buaa.eos.service.BlockService;
 
 /**
  * @author liuzh
@@ -43,6 +36,8 @@ import java.util.List;
  */
 @Controller
 public class IndexController {
+    @Autowired
+    private BlockService blockService;
 
     @RequestMapping(value = "/")
     public String index()

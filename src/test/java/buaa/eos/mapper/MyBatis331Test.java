@@ -24,7 +24,6 @@
 
 package buaa.eos.mapper;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -36,9 +35,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 import buaa.eos.Application;
 import buaa.eos.model.Block;
-import buaa.eos.mapper.BlockMapper;
-
-import java.util.List;
 
 /**
  * @author liuzh
@@ -57,13 +53,8 @@ public class MyBatis331Test {
 
     @Test
     public void testSelectById() {
-        Block block;
-        List<Block> b =mapper.selectAll();
-        block =b.get(0);
-        System.out.println("aaa"+block.getId().toString());
+        Block block= new Block();
 
-        block.setTimestamp("10230123");
-        block.setId(123);
         mapper.insert(block);
 
 

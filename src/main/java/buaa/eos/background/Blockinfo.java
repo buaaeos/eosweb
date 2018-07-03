@@ -3,10 +3,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import buaa.eos.service.BlockService;
-import org.json.*;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import buaa.eos.model.Block;
+import net.sf.json.JSONObject;
+import java.util.Date;
 @Component
-//@EnableScheduling
+@EnableScheduling
 public class Blockinfo {
     @Autowired
     private BlockService blockService;
@@ -23,15 +25,33 @@ public class Blockinfo {
         }
         RemoteBlockNum = HttpUtil.getEosBlockNum();
         while (localBlockNum < RemoteBlockNum) {
-            String para = "{\"block_num_or_id\":\""+1+"\"}";
+            System.out.println("local:"+localBlockNum.toString());
+            System.out.println("Remote:"+RemoteBlockNum.toString());
+
+            String para = "{\"block_num_or_id\":\""+localBlockNum.toString()+"\"}";
             String method = "get_block";
-            String block = HttpUtil.doEosPost(method, para);
-            JSONObject jsonObject = new JSONObject(block);
-            Block model = new Block();
-            model.setId((Integer) jsonObject.get("block_num"));
-            model.setTimestamp((String) jsonObject.get("timestamp"));
-            blockService.save(model);
-            localBlockNum = (Integer) jsonObject.get("block_num") + 1;
+            String jsondata = HttpUtil.doEosPost(method, para);
+            Block block = new Block();
+
+            if(jsondata == null)
+            {
+                block.setBlock_num(localBlockNum);
+                Date date = new Date();
+                block.setTimestamp(date);
+                block.setId("error");
+            }
+            else
+            {
+                JSONObject jsonObject =JSONObject.fromObject(jsondata);
+                block = (Block) JSONObject.toBean(jsonObject,Block.class);
+            }
+
+
+
+
+            blockService.save(block);
+            localBlockNum =localBlockNum+1;
+//            localBlockNum = (Integer) jsonObject.get("block_num") + 1;
             RemoteBlockNum = HttpUtil.getEosBlockNum();
 
         }

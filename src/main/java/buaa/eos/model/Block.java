@@ -1,79 +1,78 @@
 package buaa.eos.model;
 
+import java.util.Date;
 import javax.persistence.*;
-
+import  java.util.List;
 public class Block extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer blk_id;
 
-    @Column(name = "blk_id")
-    private String blkId;
+    private String id;
 
-    private String timestamp;
+    private Date timestamp;
 
     private String previous;
 
-    @Column(name = "transaction_mroot")
-    private String transactionMroot;
+    private String transaction_mroot;
 
-    @Column(name = "action_mroot")
-    private String actionMroot;
+    private String action_mroot;
 
-    @Column(name = "schedule_version")
-    private Integer scheduleVersion;
+    private Integer schedule_version;
 
-    @Column(name = "new_producers")
-    private String newProducers;
+    private String new_producers;
 
-    @Column(name = "block_num")
-    private Integer blockNum;
+    private String producer_signature;
 
-    @Column(name = "ref_block_prefix")
-    private Long refBlockPrefix;
+    private Integer block_num;
 
-    @Column(name = "producer_signature")
-    private String producerSignature;
+    private Long ref_block_prefix;
+
+    private List<String> header_extensions;
+
+    private Integer comfirmed;
+
+    private List<String> transactions;
+
+    /**
+     * @return blk_id
+     */
+    public Integer getBlk_id() {
+        return blk_id;
+    }
+
+    /**
+     * @param blk_id
+     */
+    public void setBlk_id(Integer blk_id) {
+        this.blk_id = blk_id;
+    }
 
     /**
      * @return id
      */
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
     /**
      * @param id
      */
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
-    }
-
-    /**
-     * @return blk_id
-     */
-    public String getBlkId() {
-        return blkId;
-    }
-
-    /**
-     * @param blkId
-     */
-    public void setBlkId(String blkId) {
-        this.blkId = blkId;
     }
 
     /**
      * @return timestamp
      */
-    public String getTimestamp() {
+    public Date getTimestamp() {
         return timestamp;
     }
 
     /**
      * @param timestamp
      */
-    public void setTimestamp(String timestamp) {
+    public void setTimestamp(Date timestamp) {
         this.timestamp = timestamp;
     }
 
@@ -94,98 +93,140 @@ public class Block extends BaseEntity {
     /**
      * @return transaction_mroot
      */
-    public String getTransactionMroot() {
-        return transactionMroot;
+    public String getTransaction_mroot() {
+        return transaction_mroot;
     }
 
     /**
-     * @param transactionMroot
+     * @param transaction_mroot
      */
-    public void setTransactionMroot(String transactionMroot) {
-        this.transactionMroot = transactionMroot;
+    public void setTransaction_mroot(String transaction_mroot) {
+        this.transaction_mroot = transaction_mroot;
     }
 
     /**
      * @return action_mroot
      */
-    public String getActionMroot() {
-        return actionMroot;
+    public String getAction_mroot() {
+        return action_mroot;
     }
 
     /**
-     * @param actionMroot
+     * @param action_mroot
      */
-    public void setActionMroot(String actionMroot) {
-        this.actionMroot = actionMroot;
+    public void setAction_mroot(String action_mroot) {
+        this.action_mroot = action_mroot;
     }
 
     /**
      * @return schedule_version
      */
-    public Integer getScheduleVersion() {
-        return scheduleVersion;
+    public Integer getSchedule_version() {
+        return schedule_version;
     }
 
     /**
-     * @param scheduleVersion
+     * @param schedule_version
      */
-    public void setScheduleVersion(Integer scheduleVersion) {
-        this.scheduleVersion = scheduleVersion;
+    public void setSchedule_version(Integer schedule_version) {
+        this.schedule_version = schedule_version;
     }
 
     /**
      * @return new_producers
      */
-    public String getNewProducers() {
-        return newProducers;
+    public String getNew_producers() {
+        return new_producers;
     }
 
     /**
-     * @param newProducers
+     * @param new_producers
      */
-    public void setNewProducers(String newProducers) {
-        this.newProducers = newProducers;
-    }
-
-    /**
-     * @return block_num
-     */
-    public Integer getBlockNum() {
-        return blockNum;
-    }
-
-    /**
-     * @param blockNum
-     */
-    public void setBlockNum(Integer blockNum) {
-        this.blockNum = blockNum;
-    }
-
-    /**
-     * @return ref_block_prefix
-     */
-    public Long getRefBlockPrefix() {
-        return refBlockPrefix;
-    }
-
-    /**
-     * @param refBlockPrefix
-     */
-    public void setRefBlockPrefix(Long refBlockPrefix) {
-        this.refBlockPrefix = refBlockPrefix;
+    public void setNew_producers(String new_producers) {
+        this.new_producers = new_producers;
     }
 
     /**
      * @return producer_signature
      */
-    public String getProducerSignature() {
-        return producerSignature;
+    public String getProducer_signature() {
+        return producer_signature;
     }
 
     /**
-     * @param producerSignature
+     * @param producer_signature
      */
-    public void setProducerSignature(String producerSignature) {
-        this.producerSignature = producerSignature;
+    public void setProducer_signature(String producer_signature) {
+        this.producer_signature = producer_signature;
+    }
+
+    /**
+     * @return block_num
+     */
+    public Integer getBlock_num() {
+        return block_num;
+    }
+
+    /**
+     * @param block_num
+     */
+    public void setBlock_num(Integer block_num) {
+        this.block_num = block_num;
+    }
+
+    /**
+     * @return ref_block_prefix
+     */
+    public Long getRef_block_prefix() {
+        return ref_block_prefix;
+    }
+
+    /**
+     * @param ref_block_prefix
+     */
+    public void setRef_block_prefix(Long ref_block_prefix) {
+        this.ref_block_prefix = ref_block_prefix;
+    }
+
+    /**
+     * @return header_extensions
+     */
+    public List<String> getHeader_extensions() {
+        return header_extensions;
+    }
+
+    /**
+     * @param header_extensions
+     */
+    public void setHeader_extensions(List<String> header_extensions) {
+        this.header_extensions = header_extensions;
+    }
+
+    /**
+     * @return comfirmed
+     */
+    public Integer getComfirmed() {
+        return comfirmed;
+    }
+
+    /**
+     * @param comfirmed
+     */
+    public void setComfirmed(Integer comfirmed) {
+        this.comfirmed = comfirmed;
+    }
+
+    /**
+     * @return transactions
+     */
+    public List<String> getTransactions() {
+        return transactions;
+    }
+
+    /**
+     * @param transactions
+     */
+    public void setTransactions(List<String> transactions) {
+        this.transactions = transactions;
     }
 }
