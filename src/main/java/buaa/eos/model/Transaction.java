@@ -41,6 +41,8 @@ public class Transaction extends BaseEntity {
 
     private String transaction_extensions;
 
+    private Integer block_num;
+
     private String packed_context_free_data;
 
     /**
@@ -293,6 +295,20 @@ public class Transaction extends BaseEntity {
      */
     public void setTransaction_extensions(String transaction_extensions) {
         this.transaction_extensions = transaction_extensions;
+    }
+
+    /**
+     * @return block_num
+     */
+    public Integer getBlock_num() {
+        return block_num;
+    }
+
+    /**
+     * @param block_num
+     */
+    public void setBlock_num(Integer block_num) {
+        this.block_num = block_num;
     }
 
     /**

@@ -1,6 +1,5 @@
 package buaa.eos.model;
 
-import java.util.Date;
 import javax.persistence.*;
 
 public class Block extends BaseEntity {
@@ -10,11 +9,11 @@ public class Block extends BaseEntity {
 
     private String id;
 
-    private Date timestamp;
+    private String timestamp;
 
     private String producer;
 
-    private Integer comfirmed;
+    private Integer confirmed;
 
     private String previous;
 
@@ -69,14 +68,14 @@ public class Block extends BaseEntity {
     /**
      * @return timestamp
      */
-    public Date getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 
     /**
      * @param timestamp
      */
-    public void setTimestamp(Date timestamp) {
+    public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 
@@ -95,17 +94,17 @@ public class Block extends BaseEntity {
     }
 
     /**
-     * @return comfirmed
+     * @return confirmed
      */
-    public Integer getComfirmed() {
-        return comfirmed;
+    public Integer getConfirmed() {
+        return confirmed;
     }
 
     /**
-     * @param comfirmed
+     * @param confirmed
      */
-    public void setComfirmed(Integer comfirmed) {
-        this.comfirmed = comfirmed;
+    public void setConfirmed(Integer confirmed) {
+        this.confirmed = confirmed;
     }
 
     /**

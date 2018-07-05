@@ -9,6 +9,8 @@ public class Action extends BaseEntity {
 
     private String account;
 
+    private String name;
+
     private String authorization;
 
     private String data;
@@ -43,6 +45,20 @@ public class Action extends BaseEntity {
      */
     public void setAccount(String account) {
         this.account = account;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**

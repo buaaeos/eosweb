@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class CommonService {
-    public static Object autoSetAttr(String json,Object object)throws NoSuchMethodException {
+    public static Object autoSetAttr(Object json,Object object)throws NoSuchMethodException {
         // 将json字符串转换成jsonObject
         JSONObject jsonObject = JSONObject.fromObject(json);
         Iterator ite = jsonObject.keys();
@@ -25,18 +25,25 @@ public class CommonService {
             String c = value.getClass().toString();
             if(!c.startsWith("class java")){
                 value = value.toString();
-            }else if(value instanceof String){
-                DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
-                try{
-                    Date date = df.parse((String)value);
-                    value = date;
-                }catch (ParseException p){}
             }
+//            else if(value instanceof String){
+//                DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
+//                try{
+//                    Date date = df.parse((String)value);
+//                    value = date;
+//                }catch (ParseException p){}
+//            }
             try {
                 Method method = object.getClass().getDeclaredMethod(key,value.getClass());
                 method.invoke(object, value);
             }catch (Exception e){
-                System.out.println(e.fillInStackTrace());
+                Method method = object.getClass().getDeclaredMethod(key,Long.class);
+                try {
+
+                    method.invoke(object, Long.valueOf(value.toString()));
+                }catch (Exception e1) {
+                    System.out.println(e1.fillInStackTrace());
+                }
             }
         }
         return object;

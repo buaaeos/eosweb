@@ -16,17 +16,11 @@ public class VoteInfo extends BaseEntity {
 
     private Float staked;
 
-    private Float last_vote_weight;
+    private String last_vote_weight;
 
-    private Float proxied_vote_weight;
+    private String proxied_vote_weight;
 
     private Short is_proxy;
-
-    private Integer deferred_trx_id;
-
-    private String last_unstake_time;
-
-    private String unstaking;
 
     private Integer owner_id;
 
@@ -103,28 +97,28 @@ public class VoteInfo extends BaseEntity {
     /**
      * @return last_vote_weight
      */
-    public Float getLast_vote_weight() {
+    public String getLast_vote_weight() {
         return last_vote_weight;
     }
 
     /**
      * @param last_vote_weight
      */
-    public void setLast_vote_weight(Float last_vote_weight) {
+    public void setLast_vote_weight(String last_vote_weight) {
         this.last_vote_weight = last_vote_weight;
     }
 
     /**
      * @return proxied_vote_weight
      */
-    public Float getProxied_vote_weight() {
+    public String getProxied_vote_weight() {
         return proxied_vote_weight;
     }
 
     /**
      * @param proxied_vote_weight
      */
-    public void setProxied_vote_weight(Float proxied_vote_weight) {
+    public void setProxied_vote_weight(String proxied_vote_weight) {
         this.proxied_vote_weight = proxied_vote_weight;
     }
 
@@ -140,48 +134,6 @@ public class VoteInfo extends BaseEntity {
      */
     public void setIs_proxy(Short is_proxy) {
         this.is_proxy = is_proxy;
-    }
-
-    /**
-     * @return deferred_trx_id
-     */
-    public Integer getDeferred_trx_id() {
-        return deferred_trx_id;
-    }
-
-    /**
-     * @param deferred_trx_id
-     */
-    public void setDeferred_trx_id(Integer deferred_trx_id) {
-        this.deferred_trx_id = deferred_trx_id;
-    }
-
-    /**
-     * @return last_unstake_time
-     */
-    public String getLast_unstake_time() {
-        return last_unstake_time;
-    }
-
-    /**
-     * @param last_unstake_time
-     */
-    public void setLast_unstake_time(String last_unstake_time) {
-        this.last_unstake_time = last_unstake_time;
-    }
-
-    /**
-     * @return unstaking
-     */
-    public String getUnstaking() {
-        return unstaking;
-    }
-
-    /**
-     * @param unstaking
-     */
-    public void setUnstaking(String unstaking) {
-        this.unstaking = unstaking;
     }
 
     /**
