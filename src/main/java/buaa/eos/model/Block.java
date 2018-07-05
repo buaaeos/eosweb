@@ -2,7 +2,7 @@ package buaa.eos.model;
 
 import java.util.Date;
 import javax.persistence.*;
-import  java.util.List;
+
 public class Block extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -11,6 +11,10 @@ public class Block extends BaseEntity {
     private String id;
 
     private Date timestamp;
+
+    private String producer;
+
+    private Integer comfirmed;
 
     private String previous;
 
@@ -22,17 +26,17 @@ public class Block extends BaseEntity {
 
     private String new_producers;
 
+    private String header_extensions;
+
     private String producer_signature;
+
+    private String transactions;
+
+    private String block_extensions;
 
     private Integer block_num;
 
     private Long ref_block_prefix;
-
-    private List<String> header_extensions;
-
-    private Integer comfirmed;
-
-    private List<String> transactions;
 
     /**
      * @return blk_id
@@ -74,6 +78,34 @@ public class Block extends BaseEntity {
      */
     public void setTimestamp(Date timestamp) {
         this.timestamp = timestamp;
+    }
+
+    /**
+     * @return producer
+     */
+    public String getProducer() {
+        return producer;
+    }
+
+    /**
+     * @param producer
+     */
+    public void setProducer(String producer) {
+        this.producer = producer;
+    }
+
+    /**
+     * @return comfirmed
+     */
+    public Integer getComfirmed() {
+        return comfirmed;
+    }
+
+    /**
+     * @param comfirmed
+     */
+    public void setComfirmed(Integer comfirmed) {
+        this.comfirmed = comfirmed;
     }
 
     /**
@@ -147,6 +179,20 @@ public class Block extends BaseEntity {
     }
 
     /**
+     * @return header_extensions
+     */
+    public String getHeader_extensions() {
+        return header_extensions;
+    }
+
+    /**
+     * @param header_extensions
+     */
+    public void setHeader_extensions(String header_extensions) {
+        this.header_extensions = header_extensions;
+    }
+
+    /**
      * @return producer_signature
      */
     public String getProducer_signature() {
@@ -158,6 +204,34 @@ public class Block extends BaseEntity {
      */
     public void setProducer_signature(String producer_signature) {
         this.producer_signature = producer_signature;
+    }
+
+    /**
+     * @return transactions
+     */
+    public String getTransactions() {
+        return transactions;
+    }
+
+    /**
+     * @param transactions
+     */
+    public void setTransactions(String transactions) {
+        this.transactions = transactions;
+    }
+
+    /**
+     * @return block_extensions
+     */
+    public String getBlock_extensions() {
+        return block_extensions;
+    }
+
+    /**
+     * @param block_extensions
+     */
+    public void setBlock_extensions(String block_extensions) {
+        this.block_extensions = block_extensions;
     }
 
     /**
@@ -186,47 +260,5 @@ public class Block extends BaseEntity {
      */
     public void setRef_block_prefix(Long ref_block_prefix) {
         this.ref_block_prefix = ref_block_prefix;
-    }
-
-    /**
-     * @return header_extensions
-     */
-    public List<String> getHeader_extensions() {
-        return header_extensions;
-    }
-
-    /**
-     * @param header_extensions
-     */
-    public void setHeader_extensions(List<String> header_extensions) {
-        this.header_extensions = header_extensions;
-    }
-
-    /**
-     * @return comfirmed
-     */
-    public Integer getComfirmed() {
-        return comfirmed;
-    }
-
-    /**
-     * @param comfirmed
-     */
-    public void setComfirmed(Integer comfirmed) {
-        this.comfirmed = comfirmed;
-    }
-
-    /**
-     * @return transactions
-     */
-    public List<String> getTransactions() {
-        return transactions;
-    }
-
-    /**
-     * @param transactions
-     */
-    public void setTransactions(List<String> transactions) {
-        this.transactions = transactions;
     }
 }

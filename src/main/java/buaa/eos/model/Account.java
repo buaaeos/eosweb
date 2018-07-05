@@ -25,29 +25,21 @@ public class Account extends BaseEntity {
 
     private Float cpu_weight;
 
-    private Float net_used;
+    private String net_limit;
 
-    private Float net_available;
-
-    private Float net_max;
-
-    private Float cpu_used;
-
-    private Float cpu_available;
-
-    private Float cpu_max;
+    private String cpu_limit;
 
     private Float ram_usage;
 
-    private String self_del_from;
+    private String permissions;
 
-    private String self_del_to;
+    private String total_resources;
 
-    private Float self_del_net;
-
-    private Float self_del_cpu;
+    private String self_delegated_bandwidth;
 
     private String refund_request;
+
+    private String voter_info;
 
     /**
      * @return id
@@ -190,87 +182,31 @@ public class Account extends BaseEntity {
     }
 
     /**
-     * @return net_used
+     * @return net_limit
      */
-    public Float getNet_used() {
-        return net_used;
+    public String getNet_limit() {
+        return net_limit;
     }
 
     /**
-     * @param net_used
+     * @param net_limit
      */
-    public void setNet_used(Float net_used) {
-        this.net_used = net_used;
+    public void setNet_limit(String net_limit) {
+        this.net_limit = net_limit;
     }
 
     /**
-     * @return net_available
+     * @return cpu_limit
      */
-    public Float getNet_available() {
-        return net_available;
+    public String getCpu_limit() {
+        return cpu_limit;
     }
 
     /**
-     * @param net_available
+     * @param cpu_limit
      */
-    public void setNet_available(Float net_available) {
-        this.net_available = net_available;
-    }
-
-    /**
-     * @return net_max
-     */
-    public Float getNet_max() {
-        return net_max;
-    }
-
-    /**
-     * @param net_max
-     */
-    public void setNet_max(Float net_max) {
-        this.net_max = net_max;
-    }
-
-    /**
-     * @return cpu_used
-     */
-    public Float getCpu_used() {
-        return cpu_used;
-    }
-
-    /**
-     * @param cpu_used
-     */
-    public void setCpu_used(Float cpu_used) {
-        this.cpu_used = cpu_used;
-    }
-
-    /**
-     * @return cpu_available
-     */
-    public Float getCpu_available() {
-        return cpu_available;
-    }
-
-    /**
-     * @param cpu_available
-     */
-    public void setCpu_available(Float cpu_available) {
-        this.cpu_available = cpu_available;
-    }
-
-    /**
-     * @return cpu_max
-     */
-    public Float getCpu_max() {
-        return cpu_max;
-    }
-
-    /**
-     * @param cpu_max
-     */
-    public void setCpu_max(Float cpu_max) {
-        this.cpu_max = cpu_max;
+    public void setCpu_limit(String cpu_limit) {
+        this.cpu_limit = cpu_limit;
     }
 
     /**
@@ -288,59 +224,45 @@ public class Account extends BaseEntity {
     }
 
     /**
-     * @return self_del_from
+     * @return permissions
      */
-    public String getSelf_del_from() {
-        return self_del_from;
+    public String getPermissions() {
+        return permissions;
     }
 
     /**
-     * @param self_del_from
+     * @param permissions
      */
-    public void setSelf_del_from(String self_del_from) {
-        this.self_del_from = self_del_from;
+    public void setPermissions(String permissions) {
+        this.permissions = permissions;
     }
 
     /**
-     * @return self_del_to
+     * @return total_resources
      */
-    public String getSelf_del_to() {
-        return self_del_to;
+    public String getTotal_resources() {
+        return total_resources;
     }
 
     /**
-     * @param self_del_to
+     * @param total_resources
      */
-    public void setSelf_del_to(String self_del_to) {
-        this.self_del_to = self_del_to;
+    public void setTotal_resources(String total_resources) {
+        this.total_resources = total_resources;
     }
 
     /**
-     * @return self_del_net
+     * @return self_delegated_bandwidth
      */
-    public Float getSelf_del_net() {
-        return self_del_net;
+    public String getSelf_delegated_bandwidth() {
+        return self_delegated_bandwidth;
     }
 
     /**
-     * @param self_del_net
+     * @param self_delegated_bandwidth
      */
-    public void setSelf_del_net(Float self_del_net) {
-        this.self_del_net = self_del_net;
-    }
-
-    /**
-     * @return self_del_cpu
-     */
-    public Float getSelf_del_cpu() {
-        return self_del_cpu;
-    }
-
-    /**
-     * @param self_del_cpu
-     */
-    public void setSelf_del_cpu(Float self_del_cpu) {
-        this.self_del_cpu = self_del_cpu;
+    public void setSelf_delegated_bandwidth(String self_delegated_bandwidth) {
+        this.self_delegated_bandwidth = self_delegated_bandwidth;
     }
 
     /**
@@ -355,5 +277,19 @@ public class Account extends BaseEntity {
      */
     public void setRefund_request(String refund_request) {
         this.refund_request = refund_request;
+    }
+
+    /**
+     * @return voter_info
+     */
+    public String getVoter_info() {
+        return voter_info;
+    }
+
+    /**
+     * @param voter_info
+     */
+    public void setVoter_info(String voter_info) {
+        this.voter_info = voter_info;
     }
 }

@@ -1,4 +1,5 @@
 package buaa.eos.background;
+import buaa.eos.service.CommonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -6,7 +7,11 @@ import buaa.eos.service.BlockService;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import buaa.eos.model.Block;
 import net.sf.json.JSONObject;
+
+import java.lang.reflect.Method;
 import java.util.Date;
+import java.util.Map;
+
 @Component
 @EnableScheduling
 public class Blockinfo {
@@ -42,9 +47,10 @@ public class Blockinfo {
             }
             else
             {
-                JSONObject jsonObject =JSONObject.fromObject(jsondata);
-                block = (Block) JSONObject.toBean(jsonObject,Block.class);
+                block = (Block) CommonService.autoSetAttr(jsondata,block);
             }
+
+
 
 
 

@@ -11,15 +11,7 @@ public class Permission extends BaseEntity {
 
     private String parent;
 
-    private Integer threshold;
-
-    private String key;
-
-    private Float weight;
-
-    private String accounts;
-
-    private String waits;
+    private String required_auth;
 
     private Integer account_id;
 
@@ -66,73 +58,17 @@ public class Permission extends BaseEntity {
     }
 
     /**
-     * @return threshold
+     * @return required_auth
      */
-    public Integer getThreshold() {
-        return threshold;
+    public String getRequired_auth() {
+        return required_auth;
     }
 
     /**
-     * @param threshold
+     * @param required_auth
      */
-    public void setThreshold(Integer threshold) {
-        this.threshold = threshold;
-    }
-
-    /**
-     * @return key
-     */
-    public String getKey() {
-        return key;
-    }
-
-    /**
-     * @param key
-     */
-    public void setKey(String key) {
-        this.key = key;
-    }
-
-    /**
-     * @return weight
-     */
-    public Float getWeight() {
-        return weight;
-    }
-
-    /**
-     * @param weight
-     */
-    public void setWeight(Float weight) {
-        this.weight = weight;
-    }
-
-    /**
-     * @return accounts
-     */
-    public String getAccounts() {
-        return accounts;
-    }
-
-    /**
-     * @param accounts
-     */
-    public void setAccounts(String accounts) {
-        this.accounts = accounts;
-    }
-
-    /**
-     * @return waits
-     */
-    public String getWaits() {
-        return waits;
-    }
-
-    /**
-     * @param waits
-     */
-    public void setWaits(String waits) {
-        this.waits = waits;
+    public void setRequired_auth(String required_auth) {
+        this.required_auth = required_auth;
     }
 
     /**

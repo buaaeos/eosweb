@@ -7,9 +7,19 @@ public class Transaction extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer trx_id;
 
+    private String status;
+
+    private Integer cpu_usage_us;
+
+    private Integer net_usage_words;
+
     private String id;
 
+    private String signatures;
+
     private String compression;
+
+    private String context_free_data;
 
     private String packed_trx;
 
@@ -25,6 +35,14 @@ public class Transaction extends BaseEntity {
 
     private Integer delay_sec;
 
+    private String context_free_actions;
+
+    private String actions;
+
+    private String transaction_extensions;
+
+    private String packed_context_free_data;
+
     /**
      * @return trx_id
      */
@@ -37,6 +55,48 @@ public class Transaction extends BaseEntity {
      */
     public void setTrx_id(Integer trx_id) {
         this.trx_id = trx_id;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * @return cpu_usage_us
+     */
+    public Integer getCpu_usage_us() {
+        return cpu_usage_us;
+    }
+
+    /**
+     * @param cpu_usage_us
+     */
+    public void setCpu_usage_us(Integer cpu_usage_us) {
+        this.cpu_usage_us = cpu_usage_us;
+    }
+
+    /**
+     * @return net_usage_words
+     */
+    public Integer getNet_usage_words() {
+        return net_usage_words;
+    }
+
+    /**
+     * @param net_usage_words
+     */
+    public void setNet_usage_words(Integer net_usage_words) {
+        this.net_usage_words = net_usage_words;
     }
 
     /**
@@ -54,6 +114,20 @@ public class Transaction extends BaseEntity {
     }
 
     /**
+     * @return signatures
+     */
+    public String getSignatures() {
+        return signatures;
+    }
+
+    /**
+     * @param signatures
+     */
+    public void setSignatures(String signatures) {
+        this.signatures = signatures;
+    }
+
+    /**
      * @return compression
      */
     public String getCompression() {
@@ -65,6 +139,20 @@ public class Transaction extends BaseEntity {
      */
     public void setCompression(String compression) {
         this.compression = compression;
+    }
+
+    /**
+     * @return context_free_data
+     */
+    public String getContext_free_data() {
+        return context_free_data;
+    }
+
+    /**
+     * @param context_free_data
+     */
+    public void setContext_free_data(String context_free_data) {
+        this.context_free_data = context_free_data;
     }
 
     /**
@@ -163,5 +251,61 @@ public class Transaction extends BaseEntity {
      */
     public void setDelay_sec(Integer delay_sec) {
         this.delay_sec = delay_sec;
+    }
+
+    /**
+     * @return context_free_actions
+     */
+    public String getContext_free_actions() {
+        return context_free_actions;
+    }
+
+    /**
+     * @param context_free_actions
+     */
+    public void setContext_free_actions(String context_free_actions) {
+        this.context_free_actions = context_free_actions;
+    }
+
+    /**
+     * @return actions
+     */
+    public String getActions() {
+        return actions;
+    }
+
+    /**
+     * @param actions
+     */
+    public void setActions(String actions) {
+        this.actions = actions;
+    }
+
+    /**
+     * @return transaction_extensions
+     */
+    public String getTransaction_extensions() {
+        return transaction_extensions;
+    }
+
+    /**
+     * @param transaction_extensions
+     */
+    public void setTransaction_extensions(String transaction_extensions) {
+        this.transaction_extensions = transaction_extensions;
+    }
+
+    /**
+     * @return packed_context_free_data
+     */
+    public String getPacked_context_free_data() {
+        return packed_context_free_data;
+    }
+
+    /**
+     * @param packed_context_free_data
+     */
+    public void setPacked_context_free_data(String packed_context_free_data) {
+        this.packed_context_free_data = packed_context_free_data;
     }
 }

@@ -9,25 +9,13 @@ public class Action extends BaseEntity {
 
     private String account;
 
-    private String name;
+    private String authorization;
 
-    private String actor;
-
-    private String permission;
-
-    private String from;
-
-    private String to;
-
-    private String quantity;
+    private String data;
 
     private Integer trx_id;
 
     private String hex_data;
-
-    private Integer account_id;
-
-    private String memo;
 
     /**
      * @return id
@@ -58,87 +46,31 @@ public class Action extends BaseEntity {
     }
 
     /**
-     * @return name
+     * @return authorization
      */
-    public String getName() {
-        return name;
+    public String getAuthorization() {
+        return authorization;
     }
 
     /**
-     * @param name
+     * @param authorization
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setAuthorization(String authorization) {
+        this.authorization = authorization;
     }
 
     /**
-     * @return actor
+     * @return data
      */
-    public String getActor() {
-        return actor;
+    public String getData() {
+        return data;
     }
 
     /**
-     * @param actor
+     * @param data
      */
-    public void setActor(String actor) {
-        this.actor = actor;
-    }
-
-    /**
-     * @return permission
-     */
-    public String getPermission() {
-        return permission;
-    }
-
-    /**
-     * @param permission
-     */
-    public void setPermission(String permission) {
-        this.permission = permission;
-    }
-
-    /**
-     * @return from
-     */
-    public String getFrom() {
-        return from;
-    }
-
-    /**
-     * @param from
-     */
-    public void setFrom(String from) {
-        this.from = from;
-    }
-
-    /**
-     * @return to
-     */
-    public String getTo() {
-        return to;
-    }
-
-    /**
-     * @param to
-     */
-    public void setTo(String to) {
-        this.to = to;
-    }
-
-    /**
-     * @return quantity
-     */
-    public String getQuantity() {
-        return quantity;
-    }
-
-    /**
-     * @param quantity
-     */
-    public void setQuantity(String quantity) {
-        this.quantity = quantity;
+    public void setData(String data) {
+        this.data = data;
     }
 
     /**
@@ -167,33 +99,5 @@ public class Action extends BaseEntity {
      */
     public void setHex_data(String hex_data) {
         this.hex_data = hex_data;
-    }
-
-    /**
-     * @return account_id
-     */
-    public Integer getAccount_id() {
-        return account_id;
-    }
-
-    /**
-     * @param account_id
-     */
-    public void setAccount_id(Integer account_id) {
-        this.account_id = account_id;
-    }
-
-    /**
-     * @return memo
-     */
-    public String getMemo() {
-        return memo;
-    }
-
-    /**
-     * @param memo
-     */
-    public void setMemo(String memo) {
-        this.memo = memo;
     }
 }
