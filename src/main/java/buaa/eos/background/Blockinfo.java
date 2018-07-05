@@ -18,7 +18,8 @@ import java.util.Date;
 public class Blockinfo {
     @Autowired
     private BlockService blockService;
-    private TransactionService trxService = new TransactionService();
+    @Autowired
+    private TransactionService trxService;
     private int i = 1;
 
     @Scheduled(fixedDelay = 5000)        //fixedDelay = 5000表示当方法执行完毕5000ms后，Spring scheduling会再次调用该方法

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="buaa.eos.mapper.AccountMapper" >
+  <resultMap id="BaseResultMap" type="buaa.eos.model.Account" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="account_name" property="account_name" jdbcType="VARCHAR" />
+    <result column="head_block_num" property="head_block_num" jdbcType="INTEGER" />
+    <result column="head_block_time" property="head_block_time" jdbcType="VARCHAR" />
+    <result column="privileged" property="privileged" jdbcType="VARCHAR" />
+    <result column="last_code_update" property="last_code_update" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="VARCHAR" />
+    <result column="ram_quota" property="ram_quota" jdbcType="REAL" />
+    <result column="net_weight" property="net_weight" jdbcType="REAL" />
+    <result column="cpu_weight" property="cpu_weight" jdbcType="REAL" />
+    <result column="net_limit" property="net_limit" jdbcType="CHAR" />
+    <result column="cpu_limit" property="cpu_limit" jdbcType="CHAR" />
+    <result column="ram_usage" property="ram_usage" jdbcType="REAL" />
+    <result column="permissions" property="permissions" jdbcType="CHAR" />
+    <result column="total_resources" property="total_resources" jdbcType="CHAR" />
+    <result column="self_delegated_bandwidth" property="self_delegated_bandwidth" jdbcType="CHAR" />
+    <result column="refund_request" property="refund_request" jdbcType="VARCHAR" />
+    <result column="voter_info" property="voter_info" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

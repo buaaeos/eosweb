@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="buaa.eos.mapper.ActionMapper" >
+  <resultMap id="BaseResultMap" type="buaa.eos.model.Action" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="account" property="account" jdbcType="VARCHAR" />
+    <result column="authorization" property="authorization" jdbcType="CHAR" />
+    <result column="data" property="data" jdbcType="CHAR" />
+    <result column="trx_id" property="trx_id" jdbcType="INTEGER" />
+    <result column="hex_data" property="hex_data" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>
