@@ -17,6 +17,7 @@ public class Blockinfo {
     private BlockService blockService;
     @Autowired
     private TransactionService trxService;
+<<<<<<< HEAD
     @Autowired
     private ActionService actionService;
     @Autowired
@@ -27,6 +28,8 @@ public class Blockinfo {
     private PermissionService permissionService;
     @Autowired
     private VoteInfoService voteInfoService;
+=======
+>>>>>>> 2f7bd188210996078e9480bb2bb5f2e4c02a4b9f
     private int i = 1;
 
     @Scheduled(fixedDelay = 5000)        //fixedDelay = 5000表示当方法执行完毕5000ms后，Spring scheduling会再次调用该方法
