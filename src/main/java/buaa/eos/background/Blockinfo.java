@@ -59,9 +59,8 @@ public class Blockinfo {
             }
             else
             {
-                Set<String> accounts = new HashSet<>();
+
                 block = (Block) CommonService.autoSetAttr(jsondata,block);
-                accounts.add(block.getProducer());
                 blockService.save(block);
 
                 /*save transactions*/
@@ -99,15 +98,16 @@ public class Blockinfo {
                                 actionData = (ActionData) CommonService.autoSetAttr(actionDataObj, actionData);
                                 actionDataService.save(actionData);
 
-                                accounts.add(action.getAccount());
-                                accounts.add(actionData.getFrom_());
-                                accounts.add(actionData.getTo_());
+//                                accounts.add(action.getAccount());
+//                                accounts.add(actionData.getFrom_());
+//                                accounts.add(actionData.getTo_());
+//                                updateAccount(accounts);
                             }
                         }
                     }
                 }
 
-                updateAccount(accounts);
+
 
             }
             localBlockNum =localBlockNum+1;
@@ -128,24 +128,25 @@ public class Blockinfo {
             if(jsonData != null){
                 JSONObject accountObject = JSONObject.fromObject(jsonData);
                 account = (Account) CommonService.autoSetAttr(accountObject, account);
-                accountService.save(account);
+                int feed = accountService.save(account);
                 int accountId = account.getId();
+                if(feed == 1) {
+                    JSONArray permissions = JSONArray.fromObject(accountObject.get("permissions"));
+                    for (Object perm : permissions) {
+                        Permission permission = new Permission();
+                        permission.setAccount_id(accountId);
+                        JSONObject permObj = JSONObject.fromObject(perm);
+                        permission = (Permission) CommonService.autoSetAttr(permObj, permission);
+                        permissionService.save(permission);
+                    }
 
-                JSONArray permissions = JSONArray.fromObject(accountObject.get("permissions"));
-                for(Object perm:permissions) {
-                    Permission permission = new Permission();
-                    permission.setAccount_id(accountId);
-                    JSONObject permObj = JSONObject.fromObject(perm);
-                    permission = (Permission) CommonService.autoSetAttr(permObj,permission);
-                    permissionService.save(permission);
-                }
-
-                JSONObject voteInfoObject = JSONObject.fromObject(accountObject.get("voter_info"));
-                if(voteInfoObject.size()>0) {
-                    VoteInfo voteInfo = new VoteInfo();
-                    voteInfo.setId(accountId);
-                    voteInfo = (VoteInfo) CommonService.autoSetAttr(voteInfoObject, voteInfo);
-                    voteInfoService.save(voteInfo);
+                    JSONObject voteInfoObject = JSONObject.fromObject(accountObject.get("voter_info"));
+                    if (voteInfoObject.size() > 0) {
+                        VoteInfo voteInfo = new VoteInfo();
+                        voteInfo.setId(accountId);
+                        voteInfo = (VoteInfo) CommonService.autoSetAttr(voteInfoObject, voteInfo);
+                        voteInfoService.save(voteInfo);
+                    }
                 }
             }
         }

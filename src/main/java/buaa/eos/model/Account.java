@@ -21,9 +21,9 @@ public class Account extends BaseEntity {
 
     private Integer ram_quota;
 
-    private Integer net_weight;
+    private Long net_weight;
 
-    private Integer cpu_weight;
+    private Long cpu_weight;
 
     private String net_limit;
 
@@ -156,28 +156,28 @@ public class Account extends BaseEntity {
     /**
      * @return net_weight
      */
-    public Integer getNet_weight() {
+    public Long getNet_weight() {
         return net_weight;
     }
 
     /**
      * @param net_weight
      */
-    public void setNet_weight(Integer net_weight) {
+    public void setNet_weight(Long net_weight) {
         this.net_weight = net_weight;
     }
 
     /**
      * @return cpu_weight
      */
-    public Integer getCpu_weight() {
+    public Long getCpu_weight() {
         return cpu_weight;
     }
 
     /**
      * @param cpu_weight
      */
-    public void setCpu_weight(Integer cpu_weight) {
+    public void setCpu_weight(Long cpu_weight) {
         this.cpu_weight = cpu_weight;
     }
 

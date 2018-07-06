@@ -14,13 +14,13 @@ public class VoteInfo extends BaseEntity {
 
     private String producers;
 
-    private Float staked;
+    private Long staked;
 
     private String last_vote_weight;
 
     private String proxied_vote_weight;
 
-    private Short is_proxy;
+    private Integer is_proxy;
 
     private Integer owner_id;
 
@@ -83,14 +83,14 @@ public class VoteInfo extends BaseEntity {
     /**
      * @return staked
      */
-    public Float getStaked() {
+    public Long getStaked() {
         return staked;
     }
 
     /**
      * @param staked
      */
-    public void setStaked(Float staked) {
+    public void setStaked(Long staked) {
         this.staked = staked;
     }
 
@@ -125,14 +125,14 @@ public class VoteInfo extends BaseEntity {
     /**
      * @return is_proxy
      */
-    public Short getIs_proxy() {
+    public Integer getIs_proxy() {
         return is_proxy;
     }
 
     /**
      * @param is_proxy
      */
-    public void setIs_proxy(Short is_proxy) {
+    public void setIs_proxy(Integer is_proxy) {
         this.is_proxy = is_proxy;
     }
 

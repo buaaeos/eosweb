@@ -22,6 +22,7 @@ public class TransactionService {
         Object trx2 = newJson.get("transaction");
         newJson.remove("transaction");
         newJson.putAll((JSONObject)(trx2));
+//        newJson.put("packed_trx","");
         return newJson;
     }
 

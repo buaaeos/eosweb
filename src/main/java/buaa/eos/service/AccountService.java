@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.List;
+
 
 @Service
 public class AccountService {
@@ -17,15 +19,18 @@ public class AccountService {
 
     public int save(Account account) {
         int feedback = 0;
-        Example example = new Example(accountMapper.class);
+        Example example = new Example(Account.class);
 
         Example.Criteria criteria = example.createCriteria();
 
         criteria.andEqualTo("account_name", account.getAccount_name());
-        if (accountMapper.selectByExample(example).size()>0) {
-            feedback = accountMapper.updateByPrimaryKey(account);
+        List<Account> result = accountMapper.selectByExample(example);
+        if (result.size()>0) {
+            account.setId(result.get(0).getId());
+            accountMapper.updateByPrimaryKey(account);
         } else {
-            feedback = accountMapper.insert(account);
+            accountMapper.insert(account);
+            feedback = 1;
         }
         return feedback;
     }
