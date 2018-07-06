@@ -21,8 +21,6 @@ public class Transaction extends BaseEntity {
 
     private String context_free_data;
 
-    private String packed_trx;
-
     private String expiration;
 
     private Integer ref_block_num;
@@ -44,6 +42,8 @@ public class Transaction extends BaseEntity {
     private Integer block_num;
 
     private String packed_context_free_data;
+
+    private String packed_trx;
 
     /**
      * @return trx_id
@@ -155,20 +155,6 @@ public class Transaction extends BaseEntity {
      */
     public void setContext_free_data(String context_free_data) {
         this.context_free_data = context_free_data;
-    }
-
-    /**
-     * @return packed_trx
-     */
-    public String getPacked_trx() {
-        return packed_trx;
-    }
-
-    /**
-     * @param packed_trx
-     */
-    public void setPacked_trx(String packed_trx) {
-        this.packed_trx = packed_trx;
     }
 
     /**
@@ -323,5 +309,19 @@ public class Transaction extends BaseEntity {
      */
     public void setPacked_context_free_data(String packed_context_free_data) {
         this.packed_context_free_data = packed_context_free_data;
+    }
+
+    /**
+     * @return packed_trx
+     */
+    public String getPacked_trx() {
+        return packed_trx;
+    }
+
+    /**
+     * @param packed_trx
+     */
+    public void setPacked_trx(String packed_trx) {
+        this.packed_trx = packed_trx;
     }
 }

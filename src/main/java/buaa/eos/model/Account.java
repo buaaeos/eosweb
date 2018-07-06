@@ -19,17 +19,17 @@ public class Account extends BaseEntity {
 
     private String created;
 
-    private Float ram_quota;
+    private Integer ram_quota;
 
-    private Float net_weight;
+    private Integer net_weight;
 
-    private Float cpu_weight;
+    private Integer cpu_weight;
 
     private String net_limit;
 
     private String cpu_limit;
 
-    private Float ram_usage;
+    private Integer ram_usage;
 
     private String permissions;
 
@@ -142,42 +142,42 @@ public class Account extends BaseEntity {
     /**
      * @return ram_quota
      */
-    public Float getRam_quota() {
+    public Integer getRam_quota() {
         return ram_quota;
     }
 
     /**
      * @param ram_quota
      */
-    public void setRam_quota(Float ram_quota) {
+    public void setRam_quota(Integer ram_quota) {
         this.ram_quota = ram_quota;
     }
 
     /**
      * @return net_weight
      */
-    public Float getNet_weight() {
+    public Integer getNet_weight() {
         return net_weight;
     }
 
     /**
      * @param net_weight
      */
-    public void setNet_weight(Float net_weight) {
+    public void setNet_weight(Integer net_weight) {
         this.net_weight = net_weight;
     }
 
     /**
      * @return cpu_weight
      */
-    public Float getCpu_weight() {
+    public Integer getCpu_weight() {
         return cpu_weight;
     }
 
     /**
      * @param cpu_weight
      */
-    public void setCpu_weight(Float cpu_weight) {
+    public void setCpu_weight(Integer cpu_weight) {
         this.cpu_weight = cpu_weight;
     }
 
@@ -212,14 +212,14 @@ public class Account extends BaseEntity {
     /**
      * @return ram_usage
      */
-    public Float getRam_usage() {
+    public Integer getRam_usage() {
         return ram_usage;
     }
 
     /**
      * @param ram_usage
      */
-    public void setRam_usage(Float ram_usage) {
+    public void setRam_usage(Integer ram_usage) {
         this.ram_usage = ram_usage;
     }
 

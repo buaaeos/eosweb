@@ -23,7 +23,7 @@ public class CommonService {
             key = "set"+String.valueOf(cs);
 
             String c = value.getClass().toString();
-            if(!c.startsWith("class java")){
+            if(!c.startsWith("class java")||value instanceof Boolean){
                 value = value.toString();
             }
 //            else if(value instanceof String){
