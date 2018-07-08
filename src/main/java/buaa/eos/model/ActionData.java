@@ -1,5 +1,7 @@
 package buaa.eos.model;
 
+import org.apache.commons.lang.StringEscapeUtils;
+
 import javax.persistence.*;
 
 @Table(name = "action_data")
@@ -14,7 +16,7 @@ public class ActionData extends BaseEntity {
 
     private String quantity;
 
-    private Integer action_id;
+    private String trx_id;
 
     private String memo;
 
@@ -75,17 +77,17 @@ public class ActionData extends BaseEntity {
     }
 
     /**
-     * @return action_id
+     * @return trx_id
      */
-    public Integer getAction_id() {
-        return action_id;
+    public String getTrx_id() {
+        return trx_id;
     }
 
     /**
-     * @param action_id
+     * @param trx_id
      */
-    public void setAction_id(Integer action_id) {
-        this.action_id = action_id;
+    public void setTrx_id(String trx_id) {
+        this.trx_id = trx_id;
     }
 
     /**
@@ -99,6 +101,6 @@ public class ActionData extends BaseEntity {
      * @param memo
      */
     public void setMemo(String memo) {
-        this.memo = memo;
+        this.memo = StringEscapeUtils.escapeSql(memo);
     }
 }

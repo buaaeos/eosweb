@@ -15,7 +15,7 @@ public class Action extends BaseEntity {
 
     private String data;
 
-    private Integer trx_id;
+    private String trx_id;
 
     private String hex_data;
 
@@ -92,14 +92,14 @@ public class Action extends BaseEntity {
     /**
      * @return trx_id
      */
-    public Integer getTrx_id() {
+    public String getTrx_id() {
         return trx_id;
     }
 
     /**
      * @param trx_id
      */
-    public void setTrx_id(Integer trx_id) {
+    public void setTrx_id(String trx_id) {
         this.trx_id = trx_id;
     }
 

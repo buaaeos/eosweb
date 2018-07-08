@@ -7,6 +7,8 @@ import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class VoteInfoService {
@@ -15,13 +17,11 @@ public class VoteInfoService {
 
 
 
-    public int save(VoteInfo voteInfo) {
+    public int save(List<VoteInfo> voteInfoList) {
         int feedback = 0;
-        if (voteInfo.getId() != null) {
-            feedback = voteInfoMapper.updateByPrimaryKey(voteInfo);
-        } else {
-            feedback = voteInfoMapper.insert(voteInfo);
-        }
+
+        feedback = voteInfoMapper.insertList(voteInfoList);
+
         return feedback;
     }
 
