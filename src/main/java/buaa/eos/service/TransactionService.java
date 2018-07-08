@@ -6,6 +6,9 @@ import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Map;
+
 
 @Service
 public class TransactionService {
@@ -13,7 +16,7 @@ public class TransactionService {
 
     private TransactionMapper trxMapper;
 
-    public JSONObject  parseToSimple(JSONObject jsonObject){
+    public JSONObject  parseToSimple(Map<String,Object> jsonObject){
         Object trx = jsonObject.get("trx");
         jsonObject.remove("trx");
         JSONObject newJson = new JSONObject();
@@ -26,13 +29,13 @@ public class TransactionService {
         return newJson;
     }
 
-    public int save(Transaction trx) {
+    public int save(List<Transaction> trxList) {
         int feedback = 0;
-        if (trx.getTrx_id() != null) {
-            feedback = trxMapper.updateByPrimaryKey(trx);
-        } else {
-            feedback = trxMapper.insert(trx);
-        }
+//        if (trx.getTrx_id() != null) {
+//            feedback = trxMapper.updateByPrimaryKey(trx);
+//        } else {
+            feedback = trxMapper.insertList(trxList);
+//        }
         return feedback;
     }
 
