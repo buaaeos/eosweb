@@ -36,4 +36,8 @@ public class TransactionService {
         return feedback;
     }
 
+    public Integer transactionCount(){
+        return trxMapper.countTransaction();
+    }
+
 }

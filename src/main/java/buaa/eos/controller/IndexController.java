@@ -25,11 +25,13 @@
 package buaa.eos.controller;
 
 /*import buaa.eos.service.CountryService;*/
+import buaa.eos.service.CommonService;
+import buaa.eos.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import buaa.eos.service.BlockService;
-
+import org.springframework.ui.ModelMap;
 /**
  * @author liuzh
  * @since 2015-12-19 11:10
@@ -38,17 +40,20 @@ import buaa.eos.service.BlockService;
 public class IndexController {
     @Autowired
     private BlockService blockService;
-
+    @Autowired
+    private TransactionService  transactionService;
     @RequestMapping(value = "/")
-    public String index()
+    public String index(ModelMap map) throws Exception
     {
-
+        map.addAttribute("block_num",blockService.getMaxBlockId());
+        map.addAttribute("Eos_price",CommonService.getEosPrice());
+        map.addAttribute("Count_trx",transactionService.transactionCount());
         return "index2";
     }
     @RequestMapping(value = "/aa")
     public String test()
     {
 
-        return "index1";
+        return "index_old";
     }
 }

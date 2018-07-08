@@ -40,6 +40,8 @@ public class Blockinfo {
         if (localBlockNum == null) {
             localBlockNum = 1;
         }
+        else
+            localBlockNum+=1;
         RemoteBlockNum = HttpUtil.getEosBlockNum();
         while (localBlockNum < RemoteBlockNum) {
             System.out.println("local:"+localBlockNum.toString());
