@@ -81,12 +81,13 @@ public class Blockinfo {
                 blockList.add(block);
 
                 if(blockList.size()>batchNum && saveSuccess) {
-                    long startTime = System.currentTimeMillis();
-                    blockService.save(blockList);
-                    long endTime = System.currentTimeMillis();
-                    System.out.println("insert"+batchNum+" blocks with "+(endTime-startTime)+" ms");
-                    blockList.clear();
-
+                    try {
+                        blockService.save(blockList);
+                        blockList.clear();
+                    }catch (Exception e){
+                        System.out.println(e.fillInStackTrace());
+                        System.exit(-1);
+                    }
                 }
 
                 /*save transactions*/
