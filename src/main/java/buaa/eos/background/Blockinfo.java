@@ -3,7 +3,9 @@ import buaa.eos.model.*;
 import buaa.eos.service.*;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mysql.jdbc.MysqlDataTruncation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -51,10 +53,9 @@ public class Blockinfo {
         }else{
             localBlockNum += 1;
         }
-        else
-            localBlockNum+=1;
-        RemoteBlockNum = HttpUtil.getEosBlockNum();
 
+        RemoteBlockNum = HttpUtil.getEosBlockNum();
+        Boolean saveSuccess = false;
         while (localBlockNum < RemoteBlockNum) {
             System.out.println("local:"+localBlockNum.toString());
             System.out.println("Remote:"+RemoteBlockNum.toString());
@@ -79,7 +80,7 @@ public class Blockinfo {
                 block = (Block) CommonService.autoSetAttr(blockMap,block);
                 blockList.add(block);
 
-                if(blockList.size()>batchNum) {
+                if(blockList.size()>batchNum && saveSuccess) {
                     long startTime = System.currentTimeMillis();
                     blockService.save(blockList);
                     long endTime = System.currentTimeMillis();
@@ -103,11 +104,6 @@ public class Blockinfo {
                         trx = (Transaction) CommonService.autoSetAttr(trxMap, trx);
                         trx = (Transaction) CommonService.autoSetAttr(transMap, trx);
                         trxList.add(trx);
-                        if(trxList.size()>batchNum) {
-                            trxService.save(trxList);
-                            trxList.clear();
-
-                        }
 
 
                         String trxId = trx.getId();
@@ -120,36 +116,54 @@ public class Blockinfo {
                         for(Map act:actionMap) {
                             action = (Action) CommonService.autoSetAttr(act, action);
                             actionList.add(action);
-                            if(actionList.size()>batchNum) {
+
+                            /*save action data*/
+                            Object actD = act.get("data");
+                            if(actD instanceof Map) {
+                                Map actionDataMap = (Map)actD;
+                                if (act.get("name").equals("transfer")) {
+                                    ActionData actionData = new ActionData();
+                                    actionData.setTrx_id(trxId);
+
+
+                                    actionDataMap.put("from_", actionDataMap.get("from"));
+                                    actionDataMap.remove("from");
+                                    actionDataMap.put("to_", actionDataMap.get("to"));
+                                    actionDataMap.remove("to");
+                                    actionData = (ActionData) CommonService.autoSetAttr(actionDataMap, actionData);
+
+                                    actionDataList.add(actionData);
+
+                                } else if (act.get("name").equals("newaccount")) {
+                                    updateAccount((String) actionDataMap.get("name"));
+                                }
+                            }
+                        }
+                        if(blockList.size()>batchNum) {
+                            try {
+                                trxService.save(trxList);
+                                trxList.clear();
+//                            for (Action ac:actionList
+//                                 ) {
+//                                try {
+//                                    actionService.saveOne(ac);
+//                                }catch (DataIntegrityViolationException e){
+//
+//                                    System.out.println(e.getMessage()+"\n"+ac.getTrx_id());
+//                                    System.exit(-1);
+//                                }
+//                            }
                                 actionService.save(actionList);
                                 actionList.clear();
 
+                                actionDataService.save(actionDataList);
+                                actionDataList.clear();
+                                saveSuccess = true;
+                            }catch (Exception e){
+                                System.out.println(e.fillInStackTrace());
+                                System.exit(-1);
                             }
 
-
-                            /*save action data*/
-                            Map actionDataMap = (Map) act.get("data");
-                            if(act.get("name").equals("transfer")) {
-                                ActionData actionData = new ActionData();
-                                actionData.setTrx_id(trxId);
-
-                                actionDataMap.put("from_",actionDataMap.get("from"));
-                                actionDataMap.remove("from");
-                                actionDataMap.put("to_",actionDataMap.get("to"));
-                                actionDataMap.remove("to");
-                                actionData = (ActionData) CommonService.autoSetAttr(actionDataMap, actionData);
-
-                                actionDataList.add(actionData);
-                                if(actionDataList.size()>batchNum) {
-                                    actionDataService.save(actionDataList);
-                                    actionDataList.clear();
-
-                                }
-
-
-                            }else if(act.get("name").equals("newaccount")){
-                                updateAccount((String)actionDataMap.get("name"));
-                            }
                         }
                     }
                 }

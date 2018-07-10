@@ -24,5 +24,12 @@ public class ActionService {
         return feedback;
     }
 
+    public int saveOne(Action action) {
+        int feedback = 0;
+
+        feedback = actionMapper.insert(action);
+
+        return feedback;
+    }
 }
 
