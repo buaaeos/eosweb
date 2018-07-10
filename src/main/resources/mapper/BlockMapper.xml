@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="buaa.eos.mapper.BlockMapper" >
+  <resultMap id="BaseResultMap" type="buaa.eos.model.Block" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="blk_id" property="blk_id" jdbcType="INTEGER" />
+    <result column="id" property="id" jdbcType="VARCHAR" />
+    <result column="timestamp" property="timestamp" jdbcType="VARCHAR" />
+    <result column="producer" property="producer" jdbcType="VARCHAR" />
+    <result column="confirmed" property="confirmed" jdbcType="INTEGER" />
+    <result column="previous" property="previous" jdbcType="VARCHAR" />
+    <result column="transaction_mroot" property="transaction_mroot" jdbcType="VARCHAR" />
+    <result column="action_mroot" property="action_mroot" jdbcType="VARCHAR" />
+    <result column="schedule_version" property="schedule_version" jdbcType="INTEGER" />
+    <result column="new_producers" property="new_producers" jdbcType="VARCHAR" />
+    <result column="header_extensions" property="header_extensions" jdbcType="CHAR" />
+    <result column="producer_signature" property="producer_signature" jdbcType="VARCHAR" />
+    <result column="transactions" property="transactions" jdbcType="CHAR" />
+    <result column="block_extensions" property="block_extensions" jdbcType="CHAR" />
+    <result column="block_num" property="block_num" jdbcType="INTEGER" />
+    <result column="ref_block_prefix" property="ref_block_prefix" jdbcType="BIGINT" />
+  </resultMap>
+</mapper>

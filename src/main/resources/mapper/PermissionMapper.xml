@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="buaa.eos.mapper.PermissionMapper" >
+  <resultMap id="BaseResultMap" type="buaa.eos.model.Permission" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="perm_name" property="perm_name" jdbcType="VARCHAR" />
+    <result column="parent" property="parent" jdbcType="VARCHAR" />
+    <result column="required_auth" property="required_auth" jdbcType="CHAR" />
+    <result column="account_name" property="account_name" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

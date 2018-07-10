@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="buaa.eos.mapper.TransactionMapper" >
+  <resultMap id="BaseResultMap" type="buaa.eos.model.Transaction" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="trx_id" property="trx_id" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="cpu_usage_us" property="cpu_usage_us" jdbcType="INTEGER" />
+    <result column="net_usage_words" property="net_usage_words" jdbcType="INTEGER" />
+    <result column="id" property="id" jdbcType="VARCHAR" />
+    <result column="signatures" property="signatures" jdbcType="CHAR" />
+    <result column="compression" property="compression" jdbcType="VARCHAR" />
+    <result column="context_free_data" property="context_free_data" jdbcType="CHAR" />
+    <result column="expiration" property="expiration" jdbcType="VARCHAR" />
+    <result column="ref_block_num" property="ref_block_num" jdbcType="INTEGER" />
+    <result column="ref_block_prefix" property="ref_block_prefix" jdbcType="BIGINT" />
+    <result column="max_net_usage_words" property="max_net_usage_words" jdbcType="INTEGER" />
+    <result column="max_cpu_usage_ms" property="max_cpu_usage_ms" jdbcType="INTEGER" />
+    <result column="delay_sec" property="delay_sec" jdbcType="INTEGER" />
+    <result column="context_free_actions" property="context_free_actions" jdbcType="CHAR" />
+    <result column="actions" property="actions" jdbcType="CHAR" />
+    <result column="transaction_extensions" property="transaction_extensions" jdbcType="CHAR" />
+    <result column="block_num" property="block_num" jdbcType="INTEGER" />
+    <result column="packed_context_free_data" property="packed_context_free_data" jdbcType="LONGVARCHAR" />
+    <result column="packed_trx" property="packed_trx" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>
